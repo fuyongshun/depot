@@ -1,4 +1,4 @@
 PM: fuyongshun
-teammate:caojiecong
+SQA:caojiecong
 DBA: xiahui
 SCM: lianyi
