@@ -1,5 +1,6 @@
 <div class="cart_title">Your Cart</div>
 <table>
+	<!--
 	<% for item in @cart.line_items %>
 		<tr>
 			<td><%= item.quantity %>&times;</td>
@@ -7,6 +8,9 @@
 			<td class="item_price"><%= number_to_currency(item.total_price) %></td>
 		</tr>
 	<% end %>
+	-->
+	
+	<%= render(@cart.line_items) %>
 	
 	<tr class="total_line">
 		<td colspan="2">Total</td>

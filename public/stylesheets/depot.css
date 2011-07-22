@@ -168,3 +168,15 @@
 	color: #bfb;
 	font-size: small;
 }
+
+/* Styles for the cart in the sidebar */
+#cart, #cart table {
+	font-size: smaller;
+	color: white;
+}
+
+#cart table {
+	border-top: 1px dotted #595;
+	border-bottom: 1px dotted #595;
+	margin-bottom: 10px;
+}
