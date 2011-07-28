@@ -86,14 +86,17 @@
 
 
 #store .entry h3 {
- margin-top: 0;
- margin-bottom: 2px;
- color: #227;
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #227;
 }
 
 #store .entry p {
- margin-top: 0.5em; 
- margin-bottom: 0.8em; 
+  margin-top: 0.5em; 
+  margin-bottom: 0.8em; 
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
 }
 
 #store .entry .price_line {
