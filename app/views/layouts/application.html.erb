@@ -19,15 +19,17 @@
 			<div id="cart">
 				<% if @cart %>
 					<%= hidden_div_if(@cart.line_items.empty?, :id => "cart" ) do %>
-						<%= render @cart%> 
+					  <%= render @cart%> 
 					<% end %>	
 				<% end %>			
 				
 			</div>
+			
 			<a href="http://www..">Home</a><br />
 			<a href="http://www..">Questions</a><br />
 			<a href="http://www..">News</a><br />
 			<a href="http://www..">Contact</a><br />
+		
 		</div>
 		<div id="main">
 			<%= yield %> <!-- code.depot.e.include -->
