@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.xml
+  skip_before_filter :authorize, :only => [:new, :create]
   def index
     @orders = Order.paginate :page=>params[:page], :order=>'created_at desc',
       :per_page => 10
