@@ -1,5 +1,5 @@
 <!-- <% unless cart.line_items.empty? %> -->
-<div class="cart_title">Your Cart</div>
+<div class="cart_title"><%= t('.title')%></div>
 <table>
 	
 	<%= render(cart.line_items) %>
@@ -10,6 +10,6 @@
 	</tr>
 	
 </table>
-<%= button_to 'Checkout', new_order_url, :method => :get %>
-<%= button_to 'Empty cart', cart, :method => :delete, :confirm => 'Are you sure?' %>
+<%= button_to t('.checkout'), new_order_url, :method => :get %>
+<%= button_to t('.empty'), cart, :method => :delete, :confirm => 'Are you sure?' %>
 <!-- <% end %> -->

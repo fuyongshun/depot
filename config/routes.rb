@@ -7,15 +7,13 @@ Depot::Application.routes.draw do
   	delete 'logout' => :destroy
   end
 
-  resources :users
+  scope '(:locale)' do
+    resources :users
+    resources :orders
+    resources :line_items
+    resources :carts
 
-  resources :orders
-
-  resources :line_items
-
-  resources :carts
-
-  get "store/index"
+  #get "store/index"
 
   resources :products do
     get :who_bought, :on => :member
@@ -78,4 +76,5 @@ Depot::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+  end
 end
