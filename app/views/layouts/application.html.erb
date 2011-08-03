@@ -114,6 +114,28 @@
     				</div>
     			</td>
     			<td>
+    				<div id="category">
+		    			<ul>
+		    			<% if @categories %>
+		    			  <%= hidden_div_if(@categories.empty?, :id => "category") do %>
+		    				<% @categories.each do |category| %>
+							  <% if category.parentid == 0%>
+							  	<li>
+							  		<h3><%= link_to category.name, {:controller => "store", :category_id => category.id}%><h3>
+							  		<ul>
+							  			<% @categories.each do |subcategory| %>
+										  <% if subcategory.parentid == category.id%>
+										  	<li><%= link_to subcategory.name, {:controller => "store", :category_id => subcategory.id}%>
+										  <% end %>
+										<% end %>
+							  		</ul>
+							  	</li>
+							  <% end %>
+							<% end %>
+		    			  <% end %>
+		    			<% end %>
+		    			</ul>
+		    		</div>
     				<div id = "personal_space">
     					<div id = "separator_line">
     						<hr size="0" color="#CCCCCC" style="filter:alpha
