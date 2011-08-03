@@ -361,3 +361,9 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 	padding-right:0.2em;
 	padding-top: 0.4em;
 }
+
+.search {
+	float: right;
+	padding-top: 0.2em;
+	padding-right: 0.5em;
+}

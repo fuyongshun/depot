@@ -30,6 +30,13 @@
 			<%= submit_tag 'submit' %>
 			<%= javascript_tag "$$('.locale input').each(Element.hide)" %>
 		<% end %>
+		
+		<!--search -->
+		<%= form_tag searches_path, :class => 'search', :method => 'get' do %>
+		<%= text_field_tag "q", params[:q] %>
+		<%= submit_tag "Search" %>
+		<% end %>
+
 	</div>
 	<div id = "pagemenu">
 		<table>
@@ -84,11 +91,13 @@
 				</a>
 			</td>
 			<td align = right style = "width:320px">
+				
 				<div class = "search_field">
 					<input type = "text" class = "search_text" />
 					<div class = "search_button">
 					</div>
 				</div>
+						
 			</td>
 		</table>
 		<div id = "page_location">
