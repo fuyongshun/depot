@@ -2,8 +2,6 @@
 <p id="notice"><%=notice %></p>
 <% end %>
 
-<h1><%= t('.title_html')%></h>
-
 <% @products.each do |product| %>
 	<div class="entry">
 		<%= image_tag(product.image_url) %>
