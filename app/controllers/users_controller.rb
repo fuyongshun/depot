@@ -39,16 +39,34 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.xml
+    # POST /users
+  # POST /users.xml
   def create
     @user = User.new(params[:user])
-
+    
+    # if the user has been login, that means he is admin
+    if session[:user_id]
+      @user.role = 1
+    else
+      @user.role = 2
+      session[:user_id] = @user.id
+    end
+    
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(users_url, :notice => 'User #{@user.name} was successfully created.') }
-        format.xml  { render :xml => @user, :status => :created, :location => @user }
+        # if the user has been login, that means he is admin
+        unless session[:user_id]
+          session[:user_id] = @user.id
+        end 
+              
+        format.html { redirect_to(admin_url, 
+          :notice => "User #{@user.name} was successfully created.") }
+        format.xml  { render :xml => @user, 
+          :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @user.errors, 
+          :status => :unprocessable_entity }
       end
     end
   end
