@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_filter :authorize, :only => [:new, :create]
   # GET /users
   # GET /users.xml
   def index
@@ -45,11 +46,8 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     
     # if the user has been login, that means he is admin
-    if session[:user_id]
-      @user.role = 1
-    else
+    unless session[:user_id]
       @user.role = 2
-      session[:user_id] = @user.id
     end
     
     respond_to do |format|
@@ -57,10 +55,13 @@ class UsersController < ApplicationController
         # if the user has been login, that means he is admin
         unless session[:user_id]
           session[:user_id] = @user.id
+          format.html { redirect_to(store_path, 
+            :notice => "Successfully Sign Up.Welcome.") }
+          format.xml  { render :xml => @user, 
+            :status => :created, :location => @user }
         end 
               
-        format.html { redirect_to(admin_url, 
-          :notice => "User #{@user.name} was successfully created.") }
+        format.html { redirect_to(users_path, :notice => "User #{@user.name} was successfully created.") }
         format.xml  { render :xml => @user, 
           :status => :created, :location => @user }
       else

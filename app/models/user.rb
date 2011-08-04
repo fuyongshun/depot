@@ -14,6 +14,30 @@ class User < ActiveRecord::Base
 			raise "Can't delete last user"
 		end
 	end
+       
+  #Get user's allowed requests uri   
+  def permission_urls   
+     user_urls = {"/products/index",
+                  "/products/edit",
+                  "/products/show",
+                  "/products/new",
+                  "/carts/index",
+                  "/carts/edit",
+                  "/carts/show",
+                  "/carts/new",
+                  "/line_items/index",
+                  "/line_items/edit",
+                  "/line_items/show",
+                  "/line_items/new",
+                  "/orders/index",
+                  "/orders/edit",
+                  "/orders/show",
+                  "/orders/new",
+                  "/users/index",
+                  "/users/edit",
+                  "/users/show",
+                  "/admin/index"}    
+  end  
 
 	class << self
 		def authenticate(name, password)
