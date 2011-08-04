@@ -154,11 +154,13 @@
     							</div>
     							
     							<% if session[:user_id] %>
-			  					  <br />
-			 					  <%= link_to 'Orders', orders_path %><br />
-								  <%= link_to 'Products', products_path %><br />
-								  <%= link_to 'Users', users_path %><br />	
-								  <br />
+    							  <% if User.find(session[:user_id]).role == 1%>
+			  					    <br />
+			 					    <%= link_to 'Orders', orders_path %><br />
+								    <%= link_to 'Products', products_path %><br />
+								    <%= link_to 'Users', users_path %><br />	
+								    <br />
+								  <% end %>
 								  <%= link_to 'Logout', logout_path, :method => :delete %>
 						  	    <% end %>	
 			 
