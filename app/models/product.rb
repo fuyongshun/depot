@@ -35,12 +35,13 @@ class Product < ActiveRecord::Base
   #upload image-----------
   def upload_image= (file_field)
     now = Time.now
+    @user_folder = "product_images/"
     @file_name = now.strftime("%y%m%d%H%M%S") + '_' + file_field.original_filename
 
-    self.image_url = "product_images/"+@file_name
+    self.image_url = @user_folder + @file_name
 
     if !file_field.original_filename.empty? and file_field.content_type.chomp =~ /gif|jpeg|png/
-      File.open("public/images/product_images/"+@file_name,"wb+") do |f|
+      File.open("public/images/" + @user_folder + @file_name,"wb+") do |f|
         f.write(file_field.read)
       end
     end
