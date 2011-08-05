@@ -61,7 +61,8 @@ class UsersController < ApplicationController
             :status => :created, :location => @user }
         end 
               
-        format.html { redirect_to(users_path, :notice => "User #{@user.name} was successfully created.") }
+        format.html { redirect_to(users_path, 
+          :notice => "User #{@user.name} was successfully created.") }
         format.xml  { render :xml => @user, 
           :status => :created, :location => @user }
       else
