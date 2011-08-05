@@ -388,3 +388,6 @@ body {
 #category {
 	color:#FFF;
 }
+#category li{
+	margin:0 0 0 20px;
+}
