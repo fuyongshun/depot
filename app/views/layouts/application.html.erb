@@ -121,7 +121,7 @@
 		    				<% @categories.each do |category| %>
 							  <% if category.parentid == 0%>
 							  	<li>
-							  		<h3><%= link_to category.name, {:controller => "store", :category_id => category.id}%><h3>
+							  		<h3><%= link_to category.name, {:controller => "store", :category_id => category.id}%></h3>
 							  		<ul>
 							  			<% @categories.each do |subcategory| %>
 										  <% if subcategory.parentid == category.id%>

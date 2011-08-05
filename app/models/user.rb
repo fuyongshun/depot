@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
 		end
 	end
        
-  #Get user's allowed requests uri   
+  #Get user's allowed requests uri  
+=begin 
   def permission_urls   
      user_urls = {"/products/index",
                   "/products/edit",
@@ -38,6 +39,7 @@ class User < ActiveRecord::Base
                   "/users/show",
                   "/admin/index"}    
   end  
+=end
 
 	class << self
 		def authenticate(name, password)
