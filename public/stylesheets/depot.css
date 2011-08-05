@@ -196,6 +196,7 @@ body {
 }
 
 .search_button {
+	display:block;
 	position:relative;
 	top:-29px;
 	width:40px;
