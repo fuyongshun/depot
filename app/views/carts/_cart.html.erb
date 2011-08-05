@@ -1,4 +1,3 @@
-<!-- <% unless cart.line_items.empty? %> -->
 <table>
 	
 	<%= render(cart.line_items) %>
@@ -9,6 +8,7 @@
 	</tr>
 	
 </table>
-<%= button_to t('.checkout'), new_order_url, :method => :get %>
-<%= button_to t('.empty'), cart, :method => :delete, :confirm => 'Are you sure?' %>
-<!-- <% end %> -->
+<%= button_to t('.checkout'), new_order_url, 
+				:method => :get %>
+<%= button_to t('.empty'), cart, :method => :delete, 
+				:confirm => 'Are you sure?' %>
