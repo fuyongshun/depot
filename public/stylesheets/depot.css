@@ -18,7 +18,7 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 									     background:url(../images/personal_board_top.png) no-repeat top; }
 						#personal_content_bottom{display:block; width:274px;height:100%; 
 									     background:url(../images/personal_board_bottom.png) no-repeat bottom; }
-							#infomation_box{display:block; width:100%; margin-top:40px; background:#cf0}
+							#personal_menu{ position:relative; top:-382px; left:16px;}
 							#nonius{position:relative; /*top:-348px;*/top:-348px; left:11px;/*left:137px;*/ display:block; width:78px; height:42px; 
 									     background:url(../images/nonius.png) no-repeat; }
 									     
