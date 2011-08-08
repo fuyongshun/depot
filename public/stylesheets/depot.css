@@ -7,7 +7,8 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 		#pagemenu {width:100%; height:78px; padding-left:10px; padding-top:1px; background:url(../images/pagemenu.png) no-repeat;}
 			#page_location{color:#8B8B8B; font-family:"Arial";  font-size: 14px; font-weight:normal; position:relative; top:7px; }
 		#content { padding-left:10px; width:100%; }
-			#personal_space{float:right; width:290px;/* background:#CF0;*/ min-height:491px;}
+			#infomation_space{width:600px;}
+			#personal_space{float:right; width:290px; background:#CF0; min-height:491px;}
 				#separator_line {float:left; height:100%}
 				#personal_content{/*background:#CF0;*/ width:100%; height:100%;}
 					#personal_title{width:262px; height:32px;background:url(../images/personal-space.png) no-repeat; margin-left:8px;}
@@ -15,9 +16,10 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 					#personal_content_box {display:block; width:274px; height:330px; background:url(../images/personal_board_center.png) repeat-y left top;
 									     margin-left:8px; margin-top:12px; margin-bottom:10px; position:relative;}
 						#personal_content_top{display:block; width:274px;height:100%; 
-									     background:url(../images/personal_board_top.png) no-repeat top; }
-						#personal_content_bottom{display:block; width:274px;height:100%; 
+									     background:url(../images/personal_board_top.png) no-repeat 0px 0px; }
+						#personal_content_bottom{display:block; width:274px;height:100%;
 									     background:url(../images/personal_board_bottom.png) no-repeat bottom; }
+							#personal_blank{display:block; width:274px; height:30px;}
 							#personal_menu{ position:relative; top:-382px; left:16px;}
 							#nonius{position:relative; /*top:-348px;*/top:-348px; left:11px;/*left:137px;*/ display:block; width:78px; height:42px; 
 									     background:url(../images/nonius.png) no-repeat; }
@@ -353,6 +355,10 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 
 
 /* Styles for the cart in the sidebar */
+#cart {
+	margin-left:4px;
+}
+
 #cart, #cart table {
 	font-size: smaller;
 	color: #888;

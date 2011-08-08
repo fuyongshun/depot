@@ -35,7 +35,7 @@
 	<div id = "pagemenu">
 		<table>
 			<td>
-				<a href = "#" class = "menu_button" unselectable="on" onselectstart="return false">
+				<a href = "/" class = "menu_button" unselectable="on" onselectstart="return false">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
@@ -100,9 +100,11 @@
 	<div id = "content">
 		<table border= "0 " cellspacing= "0 " cellpadding= "0 ">
 			<td>
-				<div id = "store">
-					<div id="main">
-    						<%= yield %>
+				<div id = "infomation_space">
+					<div id = "store">
+						<div id="main">
+    							<%= yield %>
+    						</div>
     					</div>
     				</div>
     			</td>
@@ -141,6 +143,8 @@
     						<div id = "personal_content_box">
     							<div id = "personal_content_top">
     								<div id = "personal_content_bottom">
+    								<div id = "personal_blank">
+    								</div>
  	   								<div id="cart">
     										<% if @cart %>
     				  							<%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
