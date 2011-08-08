@@ -1,99 +1,29 @@
 /*========================= global begin ============================*/
-* {
-	margin:0;
-	padding:0;
-}
-
-html {
-	min-width:900px;
-}
-
-body {
-	background:#E6E6E6;
-	min-width:900px;
-	font-family:"trebuchet MS", sans-serif;
-}
-
-#mainpart {
-	width:900px;
-	margin:0 auto;
-	background:#FFF;
-}
-
-#pagehead {
-	width:100%;
-	height:121px;
-	padding-left:3px;
-	background:url(../images/pagehead.png) no-repeat;
-}
-
-#pagemenu {
-	width:100%;
-	height:78px;
-	padding-left:10px;
-	padding-top:1px;
-	background:url(../images/pagemenu.png) no-repeat;
-}
-
-#page_location {
-	color:#8B8B8B;
-	font-family:"Arial";
-	font-size: 14px;
-	font-weight:normal;
-	position:relative;
-	top:7px;
-}
-
-#content {
-	width:100%;
-	height:491px;
-}
-
-#personal_space {
-	float:right;
-	width:290px;
-	/* background:#CF0;*/
-	height:491px;
-}
-
-#separator_line {
-	float:left;
-	height:100%
-}
-
-#personal_content {/*background:#CF0;*/
-	width:100%;
-	height:100%;
-}
-
-#personal_title {
-	width:262px;
-	height:32px;
-	background:url(../images/personal-space.png) no-repeat;
-	margin-left:8px;
-}
-
-#personal_content_box {
-	width:275px;
-	height:406px;
-	background:url(../images/cart.png) no-repeat;
-	margin-left:8px;
-	margin-top:12px;
-	padding-left:10px;
-	padding-top:40px;
-}
-
-#separator_bar {
-	width:100%;
-	height:4px;
-	background:#C2E401
-}
-
-#pagefoot {
-	width:100%;
-	height:106px;
-	padding-left:10px
-}
+* {margin:0; padding:0;}
+html {min-width:900px;} 
+body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif; }
+	#mainpart {width:900px; margin:0 auto;background:#FFF;}
+		#pagehead {width:100%; height:121px; padding-left:3px; background:url(../images/pagehead.png) no-repeat;}
+		#pagemenu {width:100%; height:78px; padding-left:10px; padding-top:1px; background:url(../images/pagemenu.png) no-repeat;}
+			#page_location{color:#8B8B8B; font-family:"Arial";  font-size: 14px; font-weight:normal; position:relative; top:7px; }
+		#content { padding-left:10px; width:100%; }
+			#personal_space{float:right; width:290px;/* background:#CF0;*/ min-height:491px;}
+				#separator_line {float:left; height:100%}
+				#personal_content{/*background:#CF0;*/ width:100%; height:100%;}
+					#personal_title{width:262px; height:32px;background:url(../images/personal-space.png) no-repeat; margin-left:8px;}
+					
+					#personal_content_box {display:block; width:274px; height:330px; background:url(../images/personal_board_center.png) repeat-y left top;
+									     margin-left:8px; margin-top:12px; margin-bottom:10px; position:relative;}
+						#personal_content_top{display:block; width:274px;height:100%; 
+									     background:url(../images/personal_board_top.png) no-repeat top; }
+						#personal_content_bottom{display:block; width:274px;height:100%; 
+									     background:url(../images/personal_board_bottom.png) no-repeat bottom; }
+							#infomation_box{display:block; width:100%; margin-top:40px; background:#cf0}
+							#nonius{position:relative; /*top:-348px;*/top:-348px; left:11px;/*left:137px;*/ display:block; width:78px; height:42px; 
+									     background:url(../images/nonius.png) no-repeat; }
+									     
+		#separator_bar{width:100%; height:4px; background:#C2E401}
+		#pagefoot {width:100%; height:106px; padding-left:10px}
 
 /*========================= global end ============================*/
 
@@ -107,7 +37,7 @@ body {
 	width:102px;
 	height:39px;
 	text-decoration:none;
-	background:url(../images/menuitem_link.png) no-repeat left top;
+	outline:none;
 }
 
 .item_name {
@@ -212,6 +142,30 @@ body {
 	background:url(../images/search_button_active.png) no-repeat right top;
 }
 /*========================= search field end ============================*/
+
+/*========================= personal menu begin ============================*/
+#personal_menu td {
+	width:61px;
+}
+.personal_menu_item {
+	display:block; 
+	position:relative;
+	top:0px;
+	left:0px;
+	width:60px; 
+	height:28px;
+	outline:none;
+}
+
+.personal_menu_item:hover {
+	width:78px;
+	height:46px;
+	top:-10px;
+	left:-7px;
+	background:url(../images/menu_border.png) no-repeat right top;
+}
+
+/*========================= personal menu end ============================*/
 
 /*========================= page foot begin ============================*/
 
