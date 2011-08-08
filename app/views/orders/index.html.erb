@@ -12,10 +12,11 @@
   </tr>
 
 <% @orders.each do |order| %>
+<% address = Address.find(order.address_id)%>
   <tr>
-    <td><%= order.name %></td>
-    <td><%= order.address %></td>
-    <td><%= order.email %></td>
+    <td><%= address.name %></td>
+    <td><%= address.position %></td>
+    <td><%= address.phone %></td>
     <td><%= order.pay_type %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>

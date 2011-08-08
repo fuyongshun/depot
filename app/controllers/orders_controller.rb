@@ -26,6 +26,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   # GET /orders/new.xml
   def new
+    @addresses = Address.find(:all, :conditions => ["user_id = ?", session[:user_id]])
     if current_cart.line_items.empty?
       redirect_to store_url, :notice => "Your cart is empty"
       return
@@ -40,6 +41,7 @@ class OrdersController < ApplicationController
 
   # GET /orders/1/edit
   def edit
+    @addresses = Address.find(:all, :conditions => ["user_id = ?", session[:user_id]])
     @order = Order.find(params[:id])
   end
 
@@ -53,7 +55,9 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
+        
         Notifier.order_received(@order).deliver
+        
         format.html { redirect_to(store_url, :notice =>
             I18n.t('.thanks')) }
         format.xml  { render :xml => @order, :status => :created, :location => @order }

@@ -14,22 +14,49 @@
       </ul>
     </div>
   <% end %>
+  
 
   <div>
-    <%= f.label :name, t('.name') + ":" %>
-    <%= f.text_field :name, :size => 40 %>
+  	<table style="width:100%" border=1>
+  		<thead>
+  			<tr>
+  				<th></th>
+  				<th>name</th>
+  				<th>address</th>
+  				<th>zip</th>
+  				<th>phone</th>
+  			</tr>  			
+  		</thead>
+  		<tbody>
+  			<% if @addresses %>
+  			<% @addresses.each do |address| %>
+  			<tr>
+  				<td>
+  					<input type="radio" name="order[address_id]" value=<%= address.id %> />
+  				</td>
+  				<td>
+  					<%= address.name %>
+  				</td>
+  				<td>
+  					<%= address.position %>
+  				</td>
+  				<td>
+  					<%= address.zip %>
+  				</td>
+  				<td>
+  					<%= address.phone %>
+  				</td>
+  			</tr>
+  			<%end%>
+  			<% end %>
+  			<tr>
+  				
+  				<td colspan=5><%= link_to 'Add a new address', new_address_path %></td>
+  			</tr>
+  		</tbody>
+  	</table>
   </div>
-  
-  <div>
-    <%= f.label :address, t('.address') + ":" %>
-    <%= f.text_area :address, :rows => 3, :cols => 40 %>
-  </div>
-  
-  <div>
-    <%= f.label :email, t('.email') + ":" %>
-    <%= f.text_field :email, :size => 40%>
-  </div>
-  
+
   <div>  	
     <%= f.label :pay_type, t('.pay_type') + ":" %>
     <%= f.select :pay_type,
