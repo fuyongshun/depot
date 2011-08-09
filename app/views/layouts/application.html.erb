@@ -7,9 +7,8 @@
   <%= stylesheet_link_tag "scaffold" %>
   <%= stylesheet_link_tag "depot", :media => "all"%><!-- <label id="code.slt"/> -->
 <!-- END:stylesheet -->
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %><!-- <label id="code.csrf"/> -->
-  
 </head>
 
 <body>
@@ -24,6 +23,10 @@
 		</object>
 
 		<%= form_tag store_path, :class => 'locale' do %>
+			<a href = "/login">login</a>
+			&nbsp;|&nbsp;
+			<a href = "signup">sign up</a>
+			&nbsp;   &nbsp;
 			<%= select_tag 'set_locale',
 				options_for_select(LANGUAGES, I18n.locale.to_s),
 				:onchange => 'this.form.submit()' %>
@@ -108,7 +111,7 @@
     					</div>
     				</div>
     			</td>
-    			<td>
+    			<td><!--
     				<div id="category">
 		    			<ul>
 		    			<% if @categories %>
@@ -130,11 +133,11 @@
 		    			  <% end %>
 		    			<% end %>
 		    			</ul>
-		    		</div>
+		    		</div>-->
     				<div id = "personal_space">
-    					<div id = "separator_line">
-    						<hr size="0" color="#CCCCCC" style="filter:alpha
-    							(opacity=0,finishopacity=100,style=1,startX=100,startY=100,finishX=0,finishY=0);width:0px; height:100%">
+    					<div id = "hide_tag">
+    						<a href = "javascript:void(0);" id = "hide_button" onclick="hide_personal_space()"></a>  
+    						<a href = "javascript:void(0);" id = "show_button" onclick="show_personal_space()"></a>     										  
     					</div>
     					<div id = "personal_content">
     						<div id = "personal_title">
@@ -207,27 +210,14 @@
 </div>
 </body>
 </html>
-
-<script>
+<script>
 	var nonius = document.getElementById("nonius");
 	if(!nonius.style.left){
 		nonius.style.left = "11px";
 	}
-	
-	function move_to(num) {	
-    		var posx = parseInt(nonius.style.left);
-    		var number = parseInt(num);
-    		    		var objleft = 11 + number * 63;
-    		if(objleft != posx){
-    			var fac = objleft>posx?21:-21;
-    			function move(){
-    				posx += fac;
-    				nonius.style.left = posx + "px";	
-    				if(posx == objleft){
-    					clearInterval(ind);
-    				}							
-    			}
-    			var ind = setInterval(move, 20);
-    		}
-	}
+
+	var hide_button = document.getElementById("hide_button");
+	var show_button = document.getElementById("show_button");
+	show_button.hide();
+	var personal = document.getElementById("personal_space");
 </script>
