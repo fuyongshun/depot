@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t('.name')%></b>
   <%= @address.name %>
 </p>
 
 <p>
-  <b>Position:</b>
+  <b><%= t('.position')%></b>
   <%= @address.position %>
 </p>
 
 <p>
-  <b>Zip:</b>
+  <b><%= t('.zip')%></b>
   <%= @address.zip %>
 </p>
 
 <p>
-  <b>Phone:</b>
+  <b><%= t('.phone')%></b>
   <%= @address.phone %>
 </p>
 
 
-<%= link_to 'Edit', edit_address_path(@address) %> |
-<%= link_to 'Back', addresses_path %>
+<%= link_to t('.edit'), edit_address_path(@address) %> |
+<%= link_to t('.back'), addresses_path %>

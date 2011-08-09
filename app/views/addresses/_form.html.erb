@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name,t('.name') %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :position %><br />
+    <%= f.label :position,t('.position') %><br />
     <%= f.text_field :position %>
   </div>
   <div class="field">
-    <%= f.label :zip %><br />
+    <%= f.label :zip,t('.zip') %><br />
     <%= f.text_field :zip %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br />
+    <%= f.label :phone,t('.phone') %><br />
     <%= f.text_field :phone %>
   </div>
   <input type=hidden name="address[user_id]" value="<%=session[:user_id]%>"/>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('.submit')%>
   </div>
 <% end %>

@@ -51,6 +51,39 @@ es:
       personal:  "personal space"
       copywrite: "© 2011 Sheji Team. All Rights Reserved"
 
+  addresses:
+    index:
+      title:     "Listing addresses"
+      name:      "Name"
+      position:  "Position"
+      zip:       "Zip"
+      phone:     "Phone"
+      show:      "Show"
+      edit:      "Edit"
+      destroy:   "Destroy"
+      new:       "New Address"
+      ifsure:    "Are you sure?"
+    edit:
+      title:     "Editing address"
+      show:      "Show"
+      back:      "Back"
+    new:
+      title:     "New address"
+      back:      "Back"
+    show:
+      name:      "Name:"
+      position:  "Position:"
+      zip:       "Zip:"
+      phone:     "Phone:"
+      back:      "Back"
+      edit:      "Edit"
+    form:
+      name:      "Name"
+      position:  "Position"
+      zip:       "Zip"
+      phone:     "Phone"
+      submit:      "Create Address"
+
   users:
     index:
       title:      "Listing Users"

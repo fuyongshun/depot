@@ -53,6 +53,39 @@ chs:
       personal:  "个人空间"
       copywrite: "© 2011 舍记小组. 版权所有"
 
+  addresses:
+    index:
+      title:     "地址列表"
+      name:      "真实姓名"
+      position:  "详细地址"
+      zip:       "邮编"
+      phone:     "手机号"
+      show:      "显示"
+      edit:      "编辑修改"
+      destroy:   "删除"
+      new:       "新建邮递地址"
+      ifsure:    "确定删除?"
+    edit:
+      title:     "编辑邮递地址"
+      show:      "显示"
+      back:      "返回"
+    new:
+      title:     "新建邮寄地址"
+      back:      "返回"
+    show:
+      name:      "真实姓名:"
+      position:  "详细地址:"
+      zip:       "邮编:"
+      phone:     "手机号:"
+      back:      "返回"
+      edit:      "编辑修改"
+    form:
+      name:      "真实姓名"
+      position:  "详细地址"
+      zip:       "邮编"
+      phone:     "手机号"
+      submit:    "确定"
+
   users:
     index:
       title:      "用户列表"
