@@ -325,6 +325,8 @@ chs:
   productupdated:     "成功更新商品！"
   
   logout:             "退出"
+  
+  plog:                "请先登录"
  
   invalid:             "用户名/密码错误或者不匹配"
   

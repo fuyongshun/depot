@@ -322,6 +322,8 @@ es:
   productupdated:     "Product was successfully updated."
   
   logout:             "Logged out"
+  
+  plog:                "Please log in"
  
   invalid:             "Invalid user/password combination"
   
