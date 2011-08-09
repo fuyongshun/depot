@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_filter :authorize
+  skip_before_filter :admin_authorize
  
   def new
     respond_to do |format|
@@ -11,10 +12,10 @@ class SessionsController < ApplicationController
   def create
     if user = User.authenticate(params[:name], params[:password])
       session[:user_id] = user.id
-      if user.role == 1
+      if user.is_admin
         redirect_to admin_url
       else
-        redirect_to store_url
+        redirect_to store_url, :notice => "Successfully login. Welcome."
       end
     else
       redirect_to login_url, :notice => I18n.t('.invalid')
@@ -22,6 +23,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    # cart = Cart.find(session[:cart_id])
+    # cart.destroy
     session[:user_id] = nil
     redirect_to store_url, :notice=>I18n.t('.logout')
   end

@@ -38,6 +38,15 @@
   		<%= f.password_field :password_confirmation, :size=>40 %>
   	</div>
   	
+  	<% if session[:user_id] and User.find(session[:user_id]).is_admin %>
+  	<div>  	
+    <%= f.label :role %>:
+    <%= f.select :role,
+    			User::ROLE_TYPES,
+    			:prompt => 'Select a Role' %>
+    </div>
+  	<% end %>
+  	
   	<div class = "submit">
   		<%= f.submit t('.submit') %>
   	</div>  
