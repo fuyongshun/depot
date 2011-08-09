@@ -7,19 +7,74 @@
 
 <p>
   <b><%= t('.description')%></b>
-  <%= @product.description %>
+  <%= strip_tags(@product.description) %>
 </p>
 
 <p>
   <b><%= t('.imageurl')%></b>
-  <%= @product.image_url %>
+  <img src="<%= @product.image_url %>"/>
 </p>
 
 <p>
   <b><%= t('.price')%></b>
   <%= @product.price %>
 </p>
-
+<br />
+<p>
+	<div id="star_wrap">
+	<ul id="star_list">
+	<li class="one-star" id="star_list_0" star:value="20">20</li>
+	<li class="two-stars" id="star_list_1" star:value="40">40</li>
+	<li class="three-stars" id="star_list_2" star:value="60">60</li>
+	<li class="four-stars" id="star_list_3" star:value="80">80</li>
+	<li class="five-stars" id="star_list_4" star:value="100">100</li>
+	</ul>
+	<span id="star_content"></span>
+	<input type="hidden" id="star_grade" name="b" value="<%if @star%><%=@star.grade%><%else%>0<%end%>" size="2" />
+	</div>
+	<script>
+	var star_lock = <%if @star %>1<% else %>0<% end%>;
+	var star_list = $("star_list").getElementsByTagName("li");
+	var grade = <%if @star%><%=@star.grade%><%else%>0<%end%>;
+	var currentkey;
+	if (grade != 0)
+	{
+		currentkey = grade / 20;
+		$("star_list_" + (currentkey - 1)).addClassName("current-rating");
+	}
+	
+	var info = ['极差', '差', '一般', '好', '很好'];
+	var key;
+	for(key = 0; key < star_list.length; key++)
+	{
+		star_list[key]._val = key;
+		star_list[key].onclick = function()
+		{
+			grade = this.getAttribute('star:value');
+			$("star_content").innerHTML = '<em>' + ($("star_grade").value = grade) + '分</em> - ' + info[this._val];
+			currentkey = this._val + 1;
+			new Ajax.Request("/stars/new?product_id=<%= @product.id %>&grade="+grade+"&ajax=1",
+		        {
+		            method: "get"
+		        }
+		    );
+			star_lock = 1;
+		}
+		star_list[key].onmouseout = function()
+		{
+			this.removeClassName("current-rating");
+			if (currentkey)
+				$("star_list_"+(currentkey - 1)).addClassName("current-rating");
+		}
+		star_list[key].onmouseover = function()
+		{
+			if (currentkey)
+				$("star_list_"+(currentkey - 1)).removeClassName("current-rating");
+			this.addClassName("current-rating");
+		}
+	}
+	</script>
+</p>
 <br />
 <p>
 	<h1><%= t('.comment')%></h1>
