@@ -242,7 +242,9 @@ en:
     form:
       name:        "Name"
       address:     "Address"
-      email:       "E-mail"
+      zip:         "EZip"
+      phone:       "Phone"
+      add:         "Add a new address"
       pay_type:    "Pay with"
       pay_prompt:  "Select a payment method"
       submit:      "Place order"
@@ -299,4 +301,36 @@ en:
         one:       "1 error prohibited this order from being saved"
         other:     "%{count} errores prohibited this order from being saved"
         
-  thanks:          "Thank you for your order"
+  thanks:          "Thank you for your order!"
+
+  cartcreated:     "Cart was successfully created."
+  
+  cartupdated:     "Cart was successfully updated."
+
+  addressupdated:   "Address was successfully updated."
+  
+  categorycreated:   "Category was successfully created."
+
+  categoryupdated:   "Category was successfully updated."
+
+  lineitemupdated:   "Line item was successfully updated."
+
+  orderupdated:      "Order was successfully updated."
+
+  productcreated:    "Product was successfully created."
+
+  productupdated:     "Product was successfully updated."
+  
+  logout:             "Logged out"
+ 
+  invalid:             "Invalid user/password combination"
+  
+  signup:             "Successfully Sign Up.Welcome."
+  
+  success:            " was successfully created."
+  
+  user:               "User"
+  
+  success1:            " was successfully updated."
+  
+  delete:              "deleted"

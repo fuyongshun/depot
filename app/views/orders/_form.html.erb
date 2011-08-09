@@ -21,10 +21,10 @@
   		<thead>
   			<tr>
   				<th></th>
-  				<th>name</th>
-  				<th>address</th>
-  				<th>zip</th>
-  				<th>phone</th>
+  				<th><%= t('.name')%></th>
+  				<th><%= t('.address')%></th>
+  				<th><%= t('.zip')%></th>
+  				<th><%= t('.phone')%></th>
   			</tr>  			
   		</thead>
   		<tbody>
@@ -51,7 +51,7 @@
   			<% end %>
   			<tr>
   				
-  				<td colspan=5><%= link_to 'Add a new address', new_address_path %></td>
+  				<td colspan=5><%= link_to t('.add'), new_address_path %></td>
   			</tr>
   		</tbody>
   	</table>

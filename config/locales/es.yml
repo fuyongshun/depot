@@ -240,12 +240,14 @@ es:
     new:
       legend:      "Por favor, introduzca sus datos"
     form:
-      name:        "Nombre"
-      address:     "Dirección"
-      email:       "E-mail"
-      pay_type:    "Pagar con"
-      pay_prompt:  "Seleccione un método de pago"
-      submit:      "Realizar Pedido"
+      name:        "Name"
+      address:     "Address"
+      zip:         "EZip"
+      phone:       "Phone"
+      add:         "Add a new address"
+      pay_type:    "Pay with"
+      pay_prompt:  "Select a payment method"
+      submit:      "Place order"
 
   categories:
     index:
@@ -300,3 +302,36 @@ es:
         other:     "%{count} errores han impedido que este %{model} se guarde"
         
   thanks:          "Gracias por su pedido"
+
+  cartcreated:     "Cart was successfully created."
+  
+  cartupdated:     "Cart was successfully updated."
+
+  addressupdated:   "Address was successfully updated."
+  
+  categorycreated:   "Category was successfully created."
+
+  categoryupdated:   "Category was successfully updated."
+
+  lineitemupdated:   "Line item was successfully updated."
+
+  orderupdated:      "Order was successfully updated."
+
+  productcreated:    "Product was successfully created."
+
+  productupdated:     "Product was successfully updated."
+  
+  logout:             "Logged out"
+ 
+  invalid:             "Invalid user/password combination"
+  
+  signup:             "Successfully Sign Up.Welcome."
+  
+  success:            " was successfully created."
+  
+  user:               "User"
+  
+  success1:            " was successfully updated."
+  
+  delete:              "deleted"
+

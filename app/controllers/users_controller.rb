@@ -56,13 +56,13 @@ class UsersController < ApplicationController
         unless session[:user_id]
           session[:user_id] = @user.id
           format.html { redirect_to(store_path, 
-            :notice => "Successfully Sign Up.Welcome.") }
+            :notice => I18n.t('.signup')) }
           format.xml  { render :xml => @user, 
             :status => :created, :location => @user }
         end 
               
         format.html { redirect_to(users_path, 
-          :notice => "User #{@user.name} was successfully created.") }
+          :notice => I18n.t('.user')+" #{@user.name} "+I18n.t('.success')) }
         format.xml  { render :xml => @user, 
           :status => :created, :location => @user }
       else
@@ -80,7 +80,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to(users_url, :notice => 'User #{@user.name} was successfully updated.') }
+        format.html { redirect_to(users_url, :notice => I18n.t('.user')+" #{@user.name} "+I18n.t('.success1')) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -95,7 +95,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     begin
     	@user.destroy
-    	flash[:notice] = "User #{@user.name} deleted"
+    	flash[:notice] = I18n.t('.user')+" #{@user.name} "+I18n.t('.delete')
     rescue Exception => e
     	flash[:notice] = e.message
     end

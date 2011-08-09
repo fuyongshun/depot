@@ -94,7 +94,7 @@ chs:
       edit:       "编辑"
       destroy:    "删除"
       ifsure:     "确定删除?"
-      new:        "新建管理员"
+      new:        "新建用户"
     new:
       title:      "新建用户"
       back:       "返回"
@@ -242,9 +242,11 @@ chs:
     new:
       legend:      "请输入您的详细信息"
     form:
-      name:        "您的姓名"
-      address:     "您的地址"
-      email:       "您的邮箱"
+      name:        "您的真实姓名"
+      address:     "您的详细地址"
+      zip:         "邮政编码"
+      phone:       "联系方式"
+      add:         "新建一个地址"
       pay_type:    "付款方式"
       pay_prompt:  "请选择一种支付方式"
       submit:      "确认下订单"
@@ -303,3 +305,35 @@ chs:
       header:
         one:         "发生一个错误，不能保存"
         oyher:       "%{count} 个错误发生，不能保存"
+
+  cartcreated:     "购物车创建成功！."
+  
+  cartupdated:     "购物车更新成功！"
+
+  addressupdated:   "地址成功地被修改！"
+  
+  categorycreated:   "成功创建书籍分类类别！."
+
+  categoryupdated:   "书籍分类类别成功地更新！"
+
+  lineitemupdated:   "产品排列项成功更新了哦！."
+
+  orderupdated:      "订单更新成功！."
+
+  productcreated:    "新建商品成功！"
+
+  productupdated:     "成功更新商品！"
+  
+  logout:             "退出"
+ 
+  invalid:             "用户名/密码错误或者不匹配"
+  
+  signup:             "注册成功；欢迎您！"
+  
+  success:            " 被成功地创建."
+  
+  user:               "用户"
+  
+  success1:            " 被成功的更新！."
+  
+  delete:              "被删除"

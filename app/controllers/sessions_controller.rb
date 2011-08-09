@@ -17,13 +17,13 @@ class SessionsController < ApplicationController
         redirect_to store_url
       end
     else
-      redirect_to login_url, :notice => "Invalid user/password combination"
+      redirect_to login_url, :notice => I18n.t('.invalid')
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to store_url, :notice=>"Logged out"
+    redirect_to store_url, :notice=>I18n.t('.logout')
   end
   
   def sign_up

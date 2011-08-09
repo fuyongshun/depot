@@ -75,7 +75,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.update_attributes(params[:order])
-        format.html { redirect_to(@order, :notice => 'Order was successfully updated.') }
+        format.html { redirect_to(@order, :notice => I18n.t('.orderupdated')) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
