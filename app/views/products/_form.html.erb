@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title,t('.title') %><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description,t('.description') %><br />
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br />
+    <%= f.label :image_url,t('.imageurl') %><br />
     <%= f.file_field("upload_image")%>
   </div>
   <div class="field">
-    <%= f.label :price %><br />
+    <%= f.label :price,t('.price') %><br />
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :category_id %><br />
+    <%= f.label :category_id,t('.category') %><br />
     <%= f.text_field :category_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('.submit')%>
   </div>
 <% end %>

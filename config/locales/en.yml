@@ -1,67 +1,257 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
   #hello: "Hello world"
+  products:
+    index:
+      title:      "Listing products"
+      show:       "Show"
+      edit:       "Edit"
+      destroy:    "Destroy"
+      product:    "New Product"
+      ifsure:     "Are you sure?"
+    edit:
+      title:      "Editing Products"
+      show:       "Show"
+      back:       "Back"
+    new:
+      title:      "New product"
+      back:       "Back"
+    show:
+      title:       "Title:"
+      description: "Description:"
+      imageurl:    "Image Url:"
+      price:       "Price:"
+      edit:        "Edit"
+      back:        "Back"
+    form:
+      submit:      "Create product"
+      title:       "Title"
+      description: "Description"
+      price:       "Price"
+      imageurl:    "Image Url"
+      category:    "Category_id"
+
   layouts:
     application:
-      title:     "Pragmatic Bookshelf"
+      head:      "Pragprog Books Online Stroe"
+      title:     "Publicaciones de Pragmatic"
       home:      "Home"
-      questions: "Questions"
-      news:      "News"
-      contact:   "Contact"
+      book:      "Books"
+      activity:  "Activity"
+      rank:      "Rank"
+      help:      "Help"
+      order:     "Orders"
+      user:      "Users"
+      category:  "categories"
+      product:   "Products"
+      logout:    "Logout"
+      some:      "home > your pragmatic catalog"
+      personal:  "personal space"
+      copywrite: "© 2011 Sheji Team. All Rights Reserved"
+
+  users:
+    index:
+      title:      "Listing Users"
+      name:       "Name:"
+      show:       "Show"
+      edit:       "Edit"
+      destroy:    "Destroy"
+      ifsure:     "Are you sure?"
+      new:        "New Users"
+    new:
+      title:      "New User"
+      back:       "Back"
+    form:
+      title:      "Enter User Details"
+      name:       "Nmae:"
+      email:      "E-Mail："
+      password:   "Password:"
+      confirm:    "Confirm:"
+      submit:      "Add User"
+    edit:
+      title1:      "Editing user"
+      title1:      "Enter User Details"
+      name:        "Nmae:"
+      email:       "E-Mail："
+      password:    "Password:"
+      confirm:     "Confirm:"
+      submit:      "Update User"
+      show:        "Show"
+      back:        "Back"
+    show:
+      name:          "Name:"
+      hashpassword:  "Hash Password:"
+      salt:          "Salt:"
+      email:         "E-mail:"
+      role:          "Role:"
+      edit:          "Edit"
+      back:          "Back"
+
+  sessions:
+    new:
+      title:      "Please Log In"
+      name:       "Name:"
+      password:   "Password："
+      login:      "Login"
+      signup:     "Sign Up"
       
   store:
     index:
-      title_html: "Your Pragmatic Catalog"
-      add:        "Add to Cart"
+      add:        "Añadir al Carrito"
 
+  line_items:
+    index:
+      title:      "Listing line_items"
+      product:    "Products"
+      cart:       "Cart"
+      show:       "Show"
+      edit:       "Edit"
+      destroy:    "Destroy"
+      lineitem:   "New Line Item"
+      ifsure:     "Are you sure?"
+    new:
+      title:      "New line_item"
+      back:       "Back"
+    show:
+      product:    "Product："
+      cart:       "Cart："
+      edit:       "Edit"
+      back:       "Back"
+    edit:
+      title:      "Editing line items"
+      show:       "Show"
+      back:       "Back"
+    form:
+      submit:     "Update Line item"
+      product:    "Product"
+      cart:       "Cart"
+
+  admin:
+    index:
+      title:        "Welcome"
+      it:           "It's"
+      we:           "We have"
+      
   carts:
+    new:
+      title:      "New cart"
+      back:       "Back"
+    edit:
+      title:      "Editing Cart"
+      show:       "Show"
+      back:       "Back"
+    show:
+      ycart:      "Your Cart"
+      total:      "Total:"
+      empty:      "Empty cart"
+      ifsure:     "Are you sure?"
+    index:
+      list:       "Listing carts"
+      show:       "Show"
+      edit:       "Edit"
+      destroy:    "Destroy"
+      new_cart:   "New Cart"
+      ifsure:     "Are you sure?"
+    form:
+      submit:     "Update Cart"
     cart:
-      tltle:      "Your Cart"
-      empty:      "Empty Cart"
+      total:      "Total:"
+      empty:      "Empty cart"
+      ifsure:     "Are you sure?"
       checkout:   "Checkout"
-
+      
   number:
     currency:
       format:
-        unit: "$"
-        precisio: 2
-        separatior: "."
+        unit:      "$"
+        precision: 2
+        separator: "."
         delimiter: ","
-        format: "%u%n"
-
+        format:    "%u%n"
+        
   orders:
+    index:
+      title:       "Listing orders"
+      name:        "Name"
+      address:     "Address"
+      email:       "E-mail"
+      pay_type:    "Pay Type"
+      show:        "Show"
+      edit:        "Edit"
+      destroy:     "Destory"
+      ifsure:      "Are you sure?"
+      neworder:    "New Order"
+    show:
+      name:        "Name:"
+      address:     "Address:"
+      email:       "E-mail:"
+      pay_type:    "Pay Type:"
+      show:        "Show"
+      edit:        "Edit"
+      back:        "Back"
+    edit:
+      title:       "Editing order"
+      show:        "Show"
+      back:        "Back"
     new:
-      legend: "Please Enter Your Details"
+      legend:      "Please Enter your Detials"
     form:
-      name: "Nmae"
-      address: "Address"
-      email: "E-mail"
-      pay_type: "Pay with"
-      pay_prompt: "Select a payment method"
-      submit: "Place Order"
+      name:        "Name"
+      address:     "Address"
+      email:       "E-mail"
+      pay_type:    "Pay with"
+      pay_prompt:  "Select a payment method"
+      submit:      "Place order"
 
-  thanks:     "Thank you for your order"
+  categories:
+    index:
+      title:       "Listing categories"
+      name:        "Name"
+      parentid:    "Parentid"
+      show:        "Show"
+      edit:        "Edit"
+      destroy:     "Destroy"
+      ifsure:      "Are you sure?"
+      newcategory: "New Category"
+    new:
+      newcategory: "New category"
+      back:        "Back"
+    show:
+      name:        "Name:"
+      parentid:    "Parentid:"
+      edit:        "Edit"
+      back:        "Back"
+    edit:
+      title:       "Editing category"
+      show:        "Show"
+      back:        "Back"
+    form:
+      name:        "Name:"
+      parentid:    "Parentid:"
+      submit:      "New Category"
 
-  activerecord:
-    models:
-      order:   "order"
-    attributes:
-      order:
-        address:     "Address"
-        name:        "Nmae"
-        email:       "E-mail"
-        pay_type:    "pay-type"
-
+  searches:
+    title:        "Search Result"
+    add:          "Add to Cart"
+      
   activerecord:
     errors:
       messages:
-        inclusion:   "is not include in the list"
-        blank:       "can't be blank"
+        inclusion: "is not include in the list"
+        blank:     "can't be blank"       
+    models:
+      order:       "order"
+    attributes:
+      order:
+        address:   "Address"
+        name:      "Name"
+        email:     "E-mail"
+        pay_type:  "pay-type"
+        
   errors:
     template:
-      body:          "There are problems with the following fields:"
+      body:        "There are problems with the following fields:"
       header:
-        one:         "1 error prohibited this order from being saved"
-        oyher:       "%{count} errors prohibited this order from being saved"
+        one:       "1 error prohibited this order from being saved"
+        other:     "%{count} errores prohibited this order from being saved"
+        
+  thanks:          "Thank you for your order"

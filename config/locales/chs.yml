@@ -1,0 +1,260 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+chs:
+  #hello: "Hello world"
+  products:
+    index:
+      title:      "商品列表"
+      show:       "显示"
+      edit:       "编辑"
+      destroy:    "删除"
+      product:    "新建商品"
+      ifsure:     "确定删除?"
+    edit:
+      title:      "编辑商品中"
+      show:       "显示"
+      back:       "返回"
+    new:
+      title:      "新建商品"
+      back:       "返回"
+    show:
+      title:       "商品名:"
+      description: "商品描述:"
+      imageurl:    "图片:"
+      price:       "价格:"
+      edit:        "编辑"
+      back:        "返回"
+    form:
+      submit:      "创建商品"
+      title:       "书名"
+      description: "书记描述"
+      price:       "价格"
+      imageurl:    "图片路径"
+      category:    "目录ID"
+
+  layouts:
+    application:
+      head:      "舍记网上书城"
+      home:      "主页"
+      book:      "书籍"
+      activity:  "活动"
+      rank:      "排行榜"
+      help:      "帮助"
+      order:     "订单"
+      user:      "用户"
+      category:  "分类"
+      product:   "商品"
+      logout:    "退出"
+      some:      "主页> 实用书架"
+      personal:  "个人空间"
+      copywrite: "© 2011 舍记小组. 版权所有"
+
+  users:
+    index:
+      title:      "用户列表"
+      name:       "用户名:"
+      show:       "显示"
+      edit:       "编辑"
+      destroy:    "删除"
+      ifsure:     "确定删除?"
+      new:        "新建管理员"
+    new:
+      title:      "新建用户"
+      back:       "返回"
+    form:
+      title:      "输入您的详细信息"
+      name:       "用户名:"
+      email:      "电子邮箱："
+      password:   "密码:"
+      confirm:    "确认密码:"
+      submit:     "确认添加"
+    edit:
+      title1:      "编辑修改用户"
+      title1:      "输入详细信息"
+      name:        "姓名:"
+      email:       "电子邮箱："
+      password:    "密码:"
+      confirm:     "确认密码:"
+      submit:      "确认更新"
+      show:        "显示"
+      back:        "返回"
+    show:
+      name:          "用户名:"
+      hashpassword:  "哈希密码:"
+      salt:          "加密盐值:"
+      email:         "电子邮箱:"
+      role:          "角色:"
+      edit:          "编辑"
+      back:          "返回"
+
+  sessions:
+    new:
+      title:      "请先登录"
+      name:       "用户名:"
+      password:   "密码："
+      login:      "登录"
+      signup:     "注册"
+      
+  store:
+    index:
+      add:        "加到购物车"
+
+  line_items:
+    index:
+      title:      "排列项列表"
+      product:    "商品 "
+      cart:       "购物车"
+      show:       "显示"
+      edit:       "编辑"
+      destroy:    "删除"
+      lineitem:   "新建项"
+      ifsure:     "确定删除?"
+    new:
+      title:      "新建项"
+      back:       "返回"
+    show:
+      product:    "产品："
+      cart:       "购物车:"
+      edit:       "编辑"
+      back:       "返回"
+    edit:
+      title:      "正在编辑 line items"
+      show:       "显示"
+      back:       "返回"
+    form:
+      submit:     "确认更新"
+      product:    "商品"
+      cart:       "购物车"
+
+  admin:
+    index:
+      title:        "欢迎光临"
+      it:           "现在是"
+      we:           "目前我们有"
+
+  carts:
+    new:
+      title:      "新购物车"
+      back:       "返回"
+    edit:
+      title:      "正在编辑购物车"
+      show:       "展示"
+      back:       "退回"
+    show:
+      ycart:      "您的购物车"
+      total:      "总计"
+      empty:      "清空购物车"
+      ifsure:     "你确定删除吗?"
+    index:
+      list:       "购物车列表"
+      show:       "显示"
+      edit:       "编辑"
+      destroy:    "删除"
+      new_cart:   "新建购物车"
+      ifsure:     "您确定删除该购物车吗?"
+    form:
+      submit:     "确认更新"
+    cart:
+      total:      "总计"
+      empty:      "清空购物车"
+      ifsure:     "你确定删除吗?"
+      checkout:   "结账买单"
+
+  number:
+    currency:
+      format:
+        unit:       "￥"
+        precisio:   2
+        separatior: "."
+        delimiter:  ","
+        format:     "%u%n"
+
+  orders:
+    index:
+      title:       "订单列表"
+      address:     "地址"
+      name:        "姓名"
+      email:       "邮箱"
+      pay_type:    "支付方式"
+      show:        "显示"
+      edit:        "编辑"
+      destroy:     "删除"
+      ifsure:      "确定删除?"
+      neworder:    "新订单"
+    show:
+      name:        "姓名:"
+      address:     "地址:"
+      email:       "邮箱:"
+      pay_type:    "支付方式:"
+      show:        "显示"
+      edit:        "编辑"
+      back:        "返回"
+    edit:
+      title:       "编辑订单"
+      show:        "显示"
+      back:        "返回"
+    new:
+      legend:      "请输入您的详细信息"
+    form:
+      name:        "您的姓名"
+      address:     "您的地址"
+      email:       "您的邮箱"
+      pay_type:    "付款方式"
+      pay_prompt:  "请选择一种支付方式"
+      submit:      "确认下订单"
+
+  categories:
+    index:
+      title:       "书籍分类列表"
+      name:        "书籍类别"
+      parentid:    "分类级数"
+      show:        "显示"
+      edit:        "编辑"
+      destroy:     "删除"
+      ifsure:      "确定删除"
+      newcategory: "创建新类别"
+    new:
+      newcategory: "创建新类别"
+      back:        "返回"
+    show:
+      name:        "类别:"
+      parentid:    "分类级数:"
+      edit:        "编辑"
+      back:        "返回"
+    edit:
+      title:       "创建新类别"
+      show:        "显示"
+      back:        "返回"
+    form:
+      name:        "类别:"
+      parentid:    "分类级数:"
+      submit:      "确定创建"
+
+  searches:
+    title:        "搜索结果"
+    add:          "加入购物车"
+
+  thanks:          "订单成功，谢谢您的光顾，欢迎再次关注"
+
+  activerecord:
+    models:
+      order:         "订单"
+    attributes:
+      order:
+        address:     "地址"
+        name:        "姓名"
+        email:       "邮箱"
+        pay_type:    "支付方式"
+
+  activerecord:
+    errors:
+      messages:
+        inclusion:   "不在这个列表里"
+        blank:       "不能是空白"
+  errors:
+    template:
+      body:          "下面的区域有存在问题:"
+      header:
+        one:         "发生一个错误，不能保存"
+        oyher:       "%{count} 个错误发生，不能保存"

@@ -1,5 +1,5 @@
 <div id="product_list">
-  <h1>Listing products</h1>
+  <h1><%= t('.title')%></h1>
 
   <table>
   <% @products.each do |product| %>
@@ -18,10 +18,10 @@
       </td>
 
       <td class="list_actions">
-        <%= link_to 'Show', product %><br/>
-        <%= link_to 'Edit', edit_product_path(product) %><br/>
-        <%= link_to 'Destroy', product, 
-                    :confirm => 'Are you sure?',
+        <%= link_to t('.show'), product %><br/>
+        <%= link_to t('.edit'), edit_product_path(product) %><br/>
+        <%= link_to t('destroy'), product, 
+                    :confirm => t('.ifsure'),
                     :method => :delete %>
       </td>
     </tr>
@@ -31,4 +31,4 @@
 
 <br />
 
-<%= link_to 'New product', new_product_path %>
+<%= link_to t('.product'), new_product_path %>

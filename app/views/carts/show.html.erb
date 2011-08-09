@@ -1,4 +1,4 @@
-<div class="cart_title">Your Cart</div>
+<div class="cart_title"><%= t('.ycart')%></div>
 <table>
 	<!--
 	<% for item in @cart.line_items %>
@@ -13,11 +13,11 @@
 	<%= render(@cart.line_items) %>
 	
 	<tr class="total_line">
-		<td colspan="2">Total</td>
+		<td colspan="2"><%= t('.total')%></td>
 		<td class="total_cell"><%= number_to_currency(@cart.total_price) %>
 	</tr>
 	
 </table>
 
-<%= button_to 'Empty cart', @cart, :method => :delete, 
-  :confirm => 'Are you sure?' %>
+<%= button_to t('.empty'), @cart, :method => :delete, 
+  :confirm => t('.ifsure') %>

@@ -2,11 +2,11 @@
 <p id="notice"><%=notice %></p>
 <% end %>
 
-<h1>Listing users</h1>
+<h1><%= t('.title')%></h1>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th><%= t('.name')%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,13 +15,13 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.name %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('.show'), user %></td>
+    <td><%= link_to t('.edit'), edit_user_path(user) %></td>
+    <td><%= link_to t('.destroy'), user, :confirm => t('.ifsure'), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Admin', new_user_path %>
+<%= link_to t('.new'), new_user_path %>

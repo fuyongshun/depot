@@ -1,9 +1,9 @@
-<h1>Listing line_items</h1>
+<h1><%= t('.title')%></h1>
 
 <table>
   <tr>
-    <th>Product</th>
-    <th>Cart</th>
+    <th><%= t('.product')%></th>
+    <th><%= t('.cart')%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= line_item.product_id %></td>
     <td><%= line_item.cart_id %></td>
-    <td><%= link_to 'Show', line_item %></td>
-    <td><%= link_to 'Edit', edit_line_item_path(line_item) %></td>
-    <td><%= link_to 'Destroy', line_item, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('.show'), line_item %></td>
+    <td><%= link_to t('.edit'), edit_line_item_path(line_item) %></td>
+    <td><%= link_to t('.destroy'), line_item, :confirm => t('.ifsure'), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Line item', new_line_item_path %>
+<%= link_to t('.lineitem'), new_line_item_path %>

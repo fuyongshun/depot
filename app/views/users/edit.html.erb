@@ -1,4 +1,4 @@
-<h1>Editing user</h1>
+<h1><%= t('.title1')%></h1>
 
 <div class = "depot_form">
 
@@ -17,30 +17,30 @@
   <% end %>
 
   <fieldset>
-  	<legend>Enter User Details</legend>
+  	<legend><%= t('.title2')%></legend>
   	
   	<div>
-  		<%= f.label :name %>:
+  		<%= f.label :name,t('.name') %>:
   		<%= f.text_field :name, :size => 40, :disabled => true  %>
   	</div>
   	
   	<div>
-  		<%= f.label :email %>:
+  		<%= f.label :email,t('.email') %>:
   		<%= f.text_field :email, :size=>40 %>
   	</div>
   	
   	<div>
-  		<%= f.label :password, 'Password' %>:
+  		<%= f.label :password, t('.password') %>:
   		<%= f.password_field :password, :size=>40 %>
   	</div>
   	
   	<div>
-  		<%= f.label :password_confirmation, 'Confirm' %>:
+  		<%= f.label :password_confirmation, t('.confirm') %>:
   		<%= f.password_field :password_confirmation, :size=>40 %>
   	</div>
   	
   	<div class = "submit">
-  		<%= f.submit "Update User" %>
+  		<%= f.submit t('.submit') %>
   	</div>  
   	
   </fieldset>
@@ -49,5 +49,5 @@
 </div>
 
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= link_to t('.show'), @user %> |
+<%= link_to t('.back'), users_path %>

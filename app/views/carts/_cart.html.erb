@@ -3,7 +3,7 @@
 	<%= render(cart.line_items) %>
 	
 	<tr class="total_line">
-		<td colspan="2">Total</td>
+		<td colspan="2"><%= t('.total')%></td>
 		<td class="total_cell"><%= number_to_currency(cart.total_price) %>
 	</tr>
 	
@@ -11,4 +11,4 @@
 <%= button_to t('.checkout'), new_order_url, 
 				:method => :get %>
 <%= button_to t('.empty'), cart, :method => :delete, 
-				:confirm => 'Are you sure?' %>
+				:confirm => t('.ifsure') %>

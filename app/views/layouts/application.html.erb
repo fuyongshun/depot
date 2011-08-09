@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	
@@ -8,6 +9,7 @@
   <%= stylesheet_link_tag "depot", :media => "all"%><!-- <label id="code.slt"/> -->
 <!-- END:stylesheet -->
   <%= javascript_include_tag :all %>
+
   <%= csrf_meta_tag %><!-- <label id="code.csrf"/> -->
 </head>
 
@@ -34,16 +36,17 @@
 			<%= javascript_tag "$$('.locale input').each(Element.hide)" %>
 		<% end %>
 
+
 	</div>
 	<div id = "pagemenu">
 		<table>
 			<td>
-				<a href = "/" class = "menu_button" unselectable="on" onselectstart="return false">
+				<a href = "#" class = "menu_button" unselectable="on" onselectstart="return false">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<div class = "bottom_text">	Home	</div>
-						<div class = "top_text">	Home	</div>
+						<div class = "bottom_text">	<%= t('.home')%>	</div>
+						<div class = "top_text">	<%= t('.home')%>	</div>
 					</div>
 				</a>
 			</td>
@@ -52,8 +55,8 @@
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<div class = "bottom_text">	Books	</div>
-						<div class = "top_text">	Books	</div>
+						<div class = "bottom_text">	<%= t('.book')%>	</div>
+						<div class = "top_text">	<%= t('.book')%>	</div>
 					</div>
 				</a>
 			</td>
@@ -62,8 +65,8 @@
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<div class = "bottom_text">	Activity	</div>
-						<div class = "top_text">	Activity	</div>
+						<div class = "bottom_text">	<%= t('.activity')%>	</div>
+						<div class = "top_text">	<%= t('.activity')%>	</div>
 					</div>
 				</a>
 			</td>
@@ -72,36 +75,42 @@
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<div class = "bottom_text">	Rank	</div>
-						<div class = "top_text">	Rank	</div>
+						<div class = "bottom_text">	<%= t('.rank')%>	</div>
+						<div class = "top_text">	<%= t('.rank')%>	</div>
 					</div>
 				</a>
 			</td>
 			<td>
-				<a href = "/guide/index.htm" class = "menu_button" unselectable="on" onselectstart="return false">
+				<a href = "#" class = "menu_button" unselectable="on" onselectstart="return false">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<div class = "bottom_text">	Guide		</div>
-						<div class = "top_text">	Guide	</div>
+						<div class = "bottom_text">	<%= t('.help')%>		</div>
+						<div class = "top_text">	<%= t('.help')%>	</div>
 					</div>
 				</a>
 			</td>
+
+	</div>
+	
 			<td align = right style = "width:320px">
 				<form name = "searcht" id = "searcht" accept-charset="UTF-8" action="/en/searches" method="get" text-decoration = none >
 					<div class = "search_field">
 						<input type = "text" class = "search_text" name = "q"/>
 						<a href="javascript:document.getElementById('searcht').submit();" style = "outline:none" class = "search_button" ></a>
 					</div>
+
 				</form>						
 			</td>
 		</table>
 		<div id = "page_location">
-			home > your pragmatic catalog
+			<%= t('.some')%>
 		</div>
 	</div>
+	
 	<div id = "content">
 		<table border= "0 " cellspacing= "0 " cellpadding= "0 ">
+
 			<td>
 				<div id = "infomation_space">
 					<div id = "store">
@@ -155,19 +164,49 @@
     				  							<% end %>
     										<% end %>
     									</div>
-    									<% if session[:user_id] %>
-    										<% if User.find(session[:user_id]).role == 1%>
-			  					    			<br />
-			 					    			<%= link_to 'Orders', orders_path %><br />
-								    			<%= link_to 'Products', products_path %><br />
-								    			<%= link_to 'Users', users_path %><br />	
-								    			<br />
-								  		<% end %>
-								  		<%= link_to 'Logout', logout_path, :method => :delete %>
-						  	    		<% end %>	
-    								</div>
-    							</div>
+    							
+    							
+    							<% if session[:user_id] %>
+    							  <% if User.find(session[:user_id]).role == 1%>
+			  					    <br />
+			 					    <%= link_to t('.order'), orders_path %><br />
+								    <%= link_to t('.product'), products_path %><br />
+								    <%= link_to t('.user'), users_path %><br />
+								    <%= link_to t('.category'), categories_path %><br />
+								    <br />
+								  <% end %>
+								  <%= link_to t('.logout'), logout_path, :method => :delete %>
+						  	    <% end %>	
+			 
     						</div>
+    					</div>
+    				</div>
+    			</td>
+    		</table>
+    	</div>
+    	<div id = "separator_bar">
+    	</div>
+    	<div id = "pagefoot">
+    		<table>
+    			<td>
+    				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+					codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" 
+					width="90" height="106">
+				<param name="movie" value="images/spining-earth.swf" />
+				<param name="quality" value="high" />
+				<param name="wmode" value="transparent">
+				</object>
+			</td>
+			<td align = right style = "width:784px">
+				<div class = "right_text">
+					<%= t('.copywrite')%>
+				</div>
+			</td>
+		</table>
+    	</div>
+</div>
+</body>
+
     						<div id = "nonius">
     						</div>
     						<div id = "personal_menu">
@@ -209,8 +248,10 @@
     	</div>
 </div>
 </body>
+
 </html>
-<script>
+
+<script>
 	var nonius = document.getElementById("nonius");
 	if(!nonius.style.left){
 		nonius.style.left = "11px";

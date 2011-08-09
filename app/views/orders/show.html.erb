@@ -1,5 +1,25 @@
 <p id="notice"><%= notice %></p>
 <p>
+<<<<<<< HEAD
+  <b><%= t('.name')%></b>
+  <%= @order.name %>
+</p>
+
+<p>
+  <b><%= t('.address')%></b>
+  <%= @order.address %>
+</p>
+
+<p>
+  <b><%= t('.email')%></b>
+  <%= @order.email %>
+</p>
+
+<p>
+  <b><%= t('.pay_type')%></b>
+  <%= @order.pay_type %>
+</p>
+=======
   <b>Pay type:</b>
   <%= @order.pay_type %>
 </p>
@@ -9,7 +29,8 @@
   <%= render ( @order.line_items) %>
 </p>
 
+>>>>>>> 5d5ac94f5156d726d69e89920fb290f71df25f2a
 
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to t('.edit'), edit_order_path(@order) %> |
+<%= link_to t('.back'), orders_path %>

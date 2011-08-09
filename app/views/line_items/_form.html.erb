@@ -12,14 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :product_id %><br />
+    <%= f.label :product_id,t('.product') %><br />
     <%= f.text_field :product_id %>
   </div>
   <div class="field">
-    <%= f.label :cart_id %><br />
+    <%= f.label :cart_id,t('.cart') %><br />
     <%= f.text_field :cart_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('.submit')%>
   </div>
 <% end %>

@@ -12,14 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name,t('.name') %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :parentid %><br />
+    <%= f.label :parentid,t('.parentid') %><br />
     <%= f.text_field :parentid %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('.submit')%>
   </div>
 <% end %>
