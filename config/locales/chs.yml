@@ -23,6 +23,7 @@ chs:
       description: "商品描述:"
       imageurl:    "图片:"
       price:       "价格:"
+      comment:     "评论:"
       edit:        "编辑"
       back:        "返回"
     form:
@@ -40,6 +41,8 @@ chs:
       book:      "书籍"
       activity:  "活动"
       rank:      "排行榜"
+      login:     "登录"
+      signup:    "注册"
       help:      "帮助"
       order:     "订单"
       user:      "用户"
@@ -170,6 +173,14 @@ chs:
         delimiter:  ","
         format:     "%u%n"
 
+  comments:
+    comment:
+      time:       "评论时间:"
+      destroy:    "删除评论"
+      ifsure:     "确定删除?"
+    form:
+      submit:     "发表评论"
+
   orders:
     index:
       title:       "订单列表"
@@ -187,6 +198,7 @@ chs:
       address:     "地址:"
       email:       "邮箱:"
       pay_type:    "支付方式:"
+      product:     "商品:"
       show:        "显示"
       edit:        "编辑"
       back:        "返回"

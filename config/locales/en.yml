@@ -20,6 +20,7 @@ en:
       description: "Description:"
       imageurl:    "Image Url:"
       price:       "Price:"
+      comment:     "Comments:"
       edit:        "Edit"
       back:        "Back"
     form:
@@ -38,7 +39,9 @@ en:
       book:      "Books"
       activity:  "Activity"
       rank:      "Rank"
-      help:      "Help"
+      help:      "Guide"
+      login:     "Login"
+      signup:    "Sign Up"
       order:     "Orders"
       user:      "Users"
       category:  "categories"
@@ -167,6 +170,14 @@ en:
         separator: "."
         delimiter: ","
         format:    "%u%n"
+
+  comments:
+    comment:
+      time:       "Time:"
+      destroy:    "Destroy Comment"
+      ifsure:     "Are you sure?"
+    form:
+      submit:     "Add a comment"
         
   orders:
     index:
@@ -185,6 +196,7 @@ en:
       address:     "Address:"
       email:       "E-mail:"
       pay_type:    "Pay Type:"
+      product:     "Products:"
       show:        "Show"
       edit:        "Edit"
       back:        "Back"

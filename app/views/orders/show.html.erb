@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <p>
-<<<<<<< HEAD
+
   <b><%= t('.name')%></b>
   <%= @order.name %>
 </p>
@@ -19,17 +19,13 @@
   <b><%= t('.pay_type')%></b>
   <%= @order.pay_type %>
 </p>
-=======
-  <b>Pay type:</b>
-  <%= @order.pay_type %>
-</p>
 
 <p>
-  <b>Products:</b>
+  <b><%= t('.product')%></b>
   <%= render ( @order.line_items) %>
 </p>
 
->>>>>>> 5d5ac94f5156d726d69e89920fb290f71df25f2a
+
 
 
 <%= link_to t('.edit'), edit_order_path(@order) %> |
