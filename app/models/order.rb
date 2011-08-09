@@ -1,4 +1,5 @@
 class Order < ActiveRecord::Base
+  belongs_to :address
   has_many :line_items, :dependent => :destroy
   PAYMENT_TYPES = ["Check", "Credit cart", "Purchase order"]
   

@@ -21,7 +21,8 @@ class AddressesControllerTest < ActionController::TestCase
       post :create, :address => @address.attributes
     end
 
-    assert_redirected_to address_path(assigns(:address))
+    #assert_redirected_to address_path(assigns(:address))
+    assert_redirected_to new_order_path
   end
 
   test "should show address" do

@@ -5,8 +5,10 @@ one:
   name: dave
   hashed_password: <%= User.encrypt_password('secret', SALT) %>
   salt: <%= SALT %> 
+  email: dave@example.org
 
 two:
   name: MyString
   hashed_password: MyString
   salt: MyString
+  email: dave@example.org

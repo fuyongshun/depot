@@ -5,9 +5,11 @@ one:
   position: MyString
   zip: MyString
   phone: MyString
+  user: one
 
 two:
   name: MyString
   position: MyString
   zip: MyString
   phone: MyString
+  user: one
