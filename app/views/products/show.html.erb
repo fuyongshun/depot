@@ -20,6 +20,15 @@
   <%= @product.price %>
 </p>
 
+<br />
+<p>
+	<h1>Comments</h1>
+	<%= render :partial => "comments/comment", :collection => @product.comments %><br />
+</p>
+
+<p>
+	<%= render "comments/form" %><br />
+</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

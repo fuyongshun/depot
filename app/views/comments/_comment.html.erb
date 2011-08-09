@@ -1,0 +1,21 @@
+<p>
+    <%= User.find_by_id(comment.user_id).name %> says:
+</p>
+
+<p>
+    <%= comment.body %>
+</p>
+
+<p>
+	<b>Time:</b>
+    <%= comment.time %>
+</p>
+
+<% if session[:user_id] == comment.user_id %> 
+<p>
+	<%= link_to 'Destroy Comment', [comment.product, comment],
+	            :confirm => 'Are you sure?',
+	            :method => :delete %>
+</p>
+<% end %>
+<br />
