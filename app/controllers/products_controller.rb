@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  skip_before_filter :authorize, :only => [:show]
+  skip_before_filter :admin_authorize, :only =>[:show]
+  
   # GET /products
   # GET /products.xml
   def index
@@ -14,6 +17,7 @@ class ProductsController < ApplicationController
   # GET /products/1.xml
   def show
     @product = Product.find(params[:id])
+    @star = Star.find(:last, :conditions => ['product_id = ? and user_id = ?', params[:id], session[:user_id]])
 
     respond_to do |format|
       format.html # show.html.erb

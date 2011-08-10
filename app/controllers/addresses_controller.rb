@@ -1,4 +1,5 @@
 class AddressesController < ApplicationController
+  skip_before_filter :admin_authorize
   # GET /addresses
   # GET /addresses.xml
   def index

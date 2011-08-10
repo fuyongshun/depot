@@ -1,4 +1,6 @@
 Depot::Application.routes.draw do
+  resources :stars
+
   resources :addresses
 
   resources :categories

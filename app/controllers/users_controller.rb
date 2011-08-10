@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :authorize, :only => [:new, :create]
+  skip_before_filter :admin_authorize, :only =>[:new, :create, :edit, :update, :show]
   # GET /users
   # GET /users.xml
   def index
@@ -25,6 +26,11 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.xml
   def new
+    if current_user and current_user.is_user
+      redirect_to(current_user, :notice => "Not permission.")
+      return
+    end
+    
     @user = User.new
 
     respond_to do |format|
@@ -46,14 +52,14 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     
     # if the user has been login, that means he is admin
-    unless session[:user_id]
-      @user.role = 2
+    unless login_as_admin
+      @user.role = 'Register_User'
     end
     
     respond_to do |format|
       if @user.save
         # if the user has been login, that means he is admin
-        unless session[:user_id]
+        unless login_as_admin
           session[:user_id] = @user.id
           format.html { redirect_to(store_path, 
             :notice => I18n.t('.signup')) }
@@ -80,7 +86,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to(users_url, :notice => I18n.t('.user')+" #{@user.name} "+I18n.t('.success1')) }
+        format.html { redirect_to(@user, 
+          :notice => I18n.t('.user')+" #{@user.name} "+I18n.t('.success1')) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

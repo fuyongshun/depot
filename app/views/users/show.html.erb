@@ -1,17 +1,10 @@
+<% if notice %>
+<p id="notice"><%=notice %></p>
+<% end %>
 
 <p>
   <b><%= t('.name')%></b>
   <%= @user.name %>
-</p>
-
-<p>
-  <b><%= t('.hashpassword')%></b>
-  <%= @user.hashed_password %>
-</p>
-
-<p>
-  <b><%= t('.salt')%></b>
-  <%= @user.salt %>
 </p>
 
 <p>
@@ -23,6 +16,6 @@
   <b><%= t('.role')%></b>
   <%= @user.role %>
 </p>
+<br />
 
-<%= link_to t('.edit'), edit_user_path(@user) %> |
-<%= link_to t('.back'), users_path %>
+<%= link_to t('.edit'), edit_user_path(@user) %> 
