@@ -19,6 +19,9 @@ class StoreController < ApplicationController
       else
         @products = Product.all
       end
+      @products = Product.paginate :page => params[:page], :order => 'created_at desc',
+        :per_page => 5
+        
       @cart = current_cart
       @categories = Category.all
     end
