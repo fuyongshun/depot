@@ -428,3 +428,81 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 #category li{
 	margin:0 0 0 20px;
 }
+
+#star_wrap {
+height: 25px;
+overflow: hidden;
+zoom: 1;
+padding: 2px 0;
+position: relative;
+z-index: 999;
+font:12px Arial;
+color:#000;
+line-height:1.2em
+}
+#star_wrap span {
+height: 23px;
+display: block;
+line-height: 23px;
+float: left;
+}
+#star_wrap ul {
+float: left;
+}
+#star_wrap #star_content {
+margin-left: 20px;
+padding-top: 2px;
+}
+#star_wrap #star_content span {
+color: #ff6d02;
+}
+#star_list,
+#star_list li {
+background: url(../images/o_star.png) no-repeat scroll 1000px 1000px;
+}
+#star_list {
+background-position: 0px 0px;
+width: 120px;
+height: 23px;
+position: relative;
+z-index: 1000;
+}
+#star_wrap #star_content em {
+color: #f60;
+font-family: arial;
+font-weight: bold;
+}
+#star_list li {
+line-height: 23px;
+height: 23px;
+position: absolute;
+top: 0px;
+left: 0px;
+text-indent: -999em;
+*zoom: 1;
+outline: none;
+cursor:pointer;
+}
+#star_list li.one-star {
+width: 20%;
+z-index: 6;
+}
+#star_list li.two-stars {
+width: 40%;
+z-index: 5;
+}
+#star_list li.three-stars {
+width: 60%;
+z-index: 4;
+}
+#star_list li.four-stars {
+width: 80%;
+z-index: 3;
+}
+#star_list li.five-stars {
+width: 100%;
+z-index: 2;
+}
+#star_list .current-rating{background-position:0 -28px}
+#star_list li.one-star.current-rating,#star_list li.two-stars.current-rating{background-position:0 -116px;}
+#star_list .three-stars .current-rating,#star_list .four-stars .current-rating,#star_list .five-stars .current-rating{background-position:0 -28px;}
