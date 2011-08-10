@@ -312,8 +312,9 @@ es:
       submit:      "New Category"
 
   searches:
-    title:        "Search Result"
-    add:          "Add to Cart"
+    index:
+      title:        "Search Result"
+      add:          "Add to Cart"
       
   activerecord:
     errors:

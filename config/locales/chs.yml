@@ -147,9 +147,9 @@ chs:
       edit:       "编辑"
       destroy:    "删除"
       ifsure:     "确定删除？"
-      new:        "新建星级等级"
+      new:        "新建星级评论"
     new:
-      title:      "新建星级等级"
+      title:      "新建星级评论"
       back:       "返回"
     show:
       product:    "商品:"
@@ -314,8 +314,9 @@ chs:
       submit:      "确定创建"
 
   searches:
-    title:        "搜索结果"
-    add:          "加入购物车"
+    index:
+      title:        "搜索结果"
+      add:          "加入购物车"
 
   thanks:          "订单成功，谢谢您的光顾，欢迎再次关注"
 

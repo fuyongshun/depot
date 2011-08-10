@@ -4,6 +4,8 @@ Depot::Application.routes.draw do
   resources :addresses
 
   resources :categories
+  
+  resources :searches
 
   get 'admin' => 'admin#index'
 
@@ -22,7 +24,7 @@ Depot::Application.routes.draw do
     resources :searches
     resources :categories
     resources :addresses
-
+    resources :stars
   #get "store/index"
 
   resources :products do
