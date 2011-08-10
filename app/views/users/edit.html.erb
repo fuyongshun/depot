@@ -41,10 +41,10 @@
   	
   	<% if @user.is_admin %>
   	<div>  	
-    <%= f.label :role %>:
+    <%= f.label :role,t('.role') %>:
     <%= f.select :role,
     			User::ROLE_TYPES,
-    			:prompt => 'Select a Role' %>
+    			:prompt => t('.select') %>
     </div>
   	<% end %>
   	

@@ -38,17 +38,19 @@ class ApplicationController < ActionController::Base
     end
     #------------------------------
     
+
     def authorize
       unless current_user
-        redirect_to login_url, :notice => "Please log in"
+        redirect_to login_url, :notice => I18n.t('.plog')
       end
     end
     
     def admin_authorize
       unless login_as_admin
-        redirect_to store_url, :notice => "Not permission."
+        redirect_to store_url, :notice => I18n.t('.nopermission')
       end
     end
+
   	
   	def store_location
       if request.get? and controller_name != "users" and controller_name != "sessions"    

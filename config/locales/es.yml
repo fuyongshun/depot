@@ -44,12 +44,14 @@ es:
       signup:    "Sign Up"
       order:     "Orders"
       user:      "Users"
+      usercenter: "User Center"
+      editprofile: "Edit Profile"
       category:  "categories"
       product:   "Products"
       logout:    "Logout"
       some:      "home > your pragmatic catalog"
       personal:  "personal space"
-      copywrite: "© 2011 Sheji Team. All Rights Reserved"
+      copywrite: "Copyright © 2011 Sheji Team. All Rights Reserved"
 
   addresses:
     index:
@@ -103,7 +105,8 @@ es:
       password:   "Password:"
       confirm:    "Confirm:"
       role:       "Role:"
-      submit:     "Add User"
+      select:      "Select a Role"
+      submit:      "Add User"
     edit:
       title1:      "Editing user"
       title1:      "Enter User Details"
@@ -112,6 +115,7 @@ es:
       password:    "Password:"
       confirm:     "Confirm:"
       role:        "Role:"
+      select:      "Select a Role"
       submit:      "Update User"
       show:        "Show"
       back:        "Back"
@@ -131,6 +135,36 @@ es:
       password:   "Password:"
       login:      "Login"
       signup:     "Sign Up"
+
+  stars:
+    index:
+      title:      "Listing stars"
+      product:    "Product"
+      user:       "User"
+      grade:      "Grade"
+      show:       "Show"
+      edit:       "Edit"
+      destroy:    "Destroy"
+      ifsure:     "Are you sure?"
+      new:        "New Star"
+    new:
+      title:      "New star"
+      back:       "Back"
+    show:
+      product:    "Product:"
+      user:       "User:"
+      grade:      "Grade:"
+      back:       "Back"
+      edit:       "Edit"
+    edit:
+      title:      "Editing star"
+      back:       "Back"
+      show:       "Show"
+    form:
+      product:    "Product:"
+      user:       "User:"
+      grade:      "Grade:"
+      submit:     "Add star"
       
   store:
     index:
@@ -279,8 +313,9 @@ es:
       submit:      "New Category"
 
   searches:
-    title:        "Search Result"
-    add:          "Add to Cart"
+    index:
+      title:        "Search Result"
+      add:          "Add to Cart"
       
   activerecord:
     errors:
@@ -324,6 +359,12 @@ es:
   productupdated:     "Product was successfully updated."
   
   logout:             "Logged out"
+  
+  login:             "Successfully login. Welcome."
+  
+  plog:                "Please log in"
+  
+  nopermission:              "No permission."
  
   invalid:             "Invalid user/password combination"
   
@@ -335,5 +376,8 @@ es:
   
   success1:            " was successfully updated."
   
-  delete:              "deleted"
-
+  delete:              "deleted"  
+  
+  starsuccess:          "Star was successfully created."
+  
+  starsuccess1:         "Star was successfully updated."

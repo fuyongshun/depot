@@ -1,10 +1,10 @@
-<h1>Listing stars</h1>
+<h1><%= t('.title')%></h1>
 
 <table>
   <tr>
-    <th>Product</th>
-    <th>User</th>
-    <th>Grade</th>
+    <th><%= t('.product')%></th>
+    <th><%= t('.user')%></th>
+    <th><%= t('.grade')%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,13 +15,13 @@
     <td><%= star.product_id %></td>
     <td><%= star.user_id %></td>
     <td><%= star.grade %></td>
-    <td><%= link_to 'Show', star %></td>
-    <td><%= link_to 'Edit', edit_star_path(star) %></td>
-    <td><%= link_to 'Destroy', star, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('.show'), star %></td>
+    <td><%= link_to t('.edit'), edit_star_path(star) %></td>
+    <td><%= link_to t('.destroy'), star, :confirm => t('.ifsure'), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Star', new_star_path %>
+<%= link_to t('.new'), new_star_path %>

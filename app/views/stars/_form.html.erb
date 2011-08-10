@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :product_id %><br />
+    <%= f.label :product_id,t('.product') %><br />
     <%= f.text_field :product_id %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br />
+    <%= f.label :user_id,t('.user') %><br />
     <%= f.text_field :user_id %>
   </div>
   <div class="field">
-    <%= f.label :grade %><br />
+    <%= f.label :grade,t('.grade') %><br />
     <%= f.text_field :grade %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('.submit')%>
   </div>
 <% end %>

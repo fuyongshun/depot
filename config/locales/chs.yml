@@ -46,12 +46,14 @@ chs:
       help:      "帮助"
       order:     "订单"
       user:      "用户"
+      usercenter: "用户中心 "
+      editprofile: "编辑个人资料"
       category:  "分类"
       product:   "商品"
       logout:    "退出"
       some:      "主页> 实用书架"
       personal:  "个人空间"
-      copywrite: "© 2011 舍记小组. 版权所有"
+      copywrite: "Copyright © 2011 舍记小组. 版权所有"
 
   addresses:
     index:
@@ -113,7 +115,8 @@ chs:
       email:       "电子邮箱:"
       password:    "密码:"
       confirm:     "确认密码:"
-      role:        "用户权限:"
+      role:        "角色："
+      select:      "选择角色"
       submit:      "确认更新"
       show:        "显示"
       back:        "返回"
@@ -133,6 +136,36 @@ chs:
       password:   "密码:"
       login:      "登录"
       signup:     "注册"
+
+  stars:
+    index:
+      title:      "星级评论列表"
+      product:    "商品"
+      user:       "评论用户"
+      grade:      "等级"
+      show:       "显示"
+      edit:       "编辑"
+      destroy:    "删除"
+      ifsure:     "确定删除？"
+      new:        "新建星级评论"
+    new:
+      title:      "新建星级评论"
+      back:       "返回"
+    show:
+      product:    "商品:"
+      user:       "评论用户:"
+      grade:      "等级:"
+      back:       "返回"
+      edit:       "编辑"
+    edit:
+      title:      "编辑修改等级"
+      back:       "返回"
+      show:       "展示"
+    form:
+      product:    "商品:"
+      user:       "评论用户:"
+      grade:      "等级:"
+      submit:     "添加等级"
       
   store:
     index:
@@ -281,8 +314,9 @@ chs:
       submit:      "确定创建"
 
   searches:
-    title:        "搜索结果"
-    add:          "加入购物车"
+    index:
+      title:        "搜索结果"
+      add:          "加入购物车"
 
   thanks:          "订单成功，谢谢您的光顾，欢迎再次关注"
 
@@ -327,10 +361,16 @@ chs:
   productupdated:     "成功更新商品！"
   
   logout:             "退出"
+  
+  nopermission:         "您没有权限."
+  
+  plog:                "请先登录"
  
   invalid:             "用户名/密码错误或者不匹配"
   
   signup:             "注册成功；欢迎您！"
+  
+  login:             "登录成功。欢迎您！"
   
   success:            " 被成功地创建."
   
@@ -338,4 +378,8 @@ chs:
   
   success1:            " 被成功的更新！."
   
-  delete:              "被删除"
+  delete:              "被删除"  
+  
+  starsuccess:          "等级创建成功."
+  
+  starsuccess1:         "等级更新成功."

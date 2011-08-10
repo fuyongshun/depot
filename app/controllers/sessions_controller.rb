@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       if user.is_admin
         redirect_to admin_url
       else
-        redirect_to $last_url || store_url, :notice => "Successfully login. Welcome."
+        redirect_to $last_url || store_url, :notice => I18n.t('.login')
       end
     else
       redirect_to login_url, :notice => I18n.t('.invalid')
