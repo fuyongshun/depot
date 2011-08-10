@@ -44,12 +44,14 @@ en:
       signup:    "Sign Up"
       order:     "Orders"
       user:      "Users"
+      usercenter: "User Center"
+      editprofile: "Edit Profile"
       category:  "categories"
       product:   "Products"
       logout:    "Logout"
       some:      "home > your pragmatic catalog"
       personal:  "personal space"
-      copywrite: "© 2011 Sheji Team. All Rights Reserved"
+      copywrite: "Copyright © 2011 Sheji Team. All Rights Reserved"
 
   addresses:
     index:
@@ -97,11 +99,12 @@ en:
       title:      "New User"
       back:       "Back"
     form:
-      title:      "Enter User Details"
-      name:       "Nmae:"
-      email:      "E-Mail："
-      password:   "Password:"
-      confirm:    "Confirm:"
+      title:       "Enter User Details"
+      name:        "Nmae:"
+      email:       "E-Mail："
+      password:    "Password:"
+      confirm:     "Confirm:"
+      select:      "Select a Role"
       submit:      "Add User"
     edit:
       title1:      "Editing user"
@@ -110,6 +113,8 @@ en:
       email:       "E-Mail："
       password:    "Password:"
       confirm:     "Confirm:"
+      role:        "Role："
+      select:      "Select a Role"
       submit:      "Update User"
       show:        "Show"
       back:        "Back"
@@ -324,10 +329,14 @@ en:
   logout:             "Logged out"
   
   plog:                "Please log in"
+  
+  nopermission:        "No permission."
  
   invalid:             "Invalid user/password combination"
   
   signup:             "Successfully Sign Up.Welcome."
+  
+  login:             "Successfully login. Welcome."
   
   success:            " was successfully created."
   

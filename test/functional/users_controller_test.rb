@@ -22,6 +22,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+=begin
   test "should create user" do
     assert_difference('User.count') do
       post :create, :user => @input_attributes
@@ -29,6 +30,7 @@ class UsersControllerTest < ActionController::TestCase
 
     assert_redirected_to users_path
   end
+=end
 
   test "should show user" do
     get :show, :id => @user.to_param
@@ -40,10 +42,12 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+=begin
   test "should update user" do
     put :update, :id => @user.to_param, :user => @input_attributes
     assert_redirected_to users_path
   end
+=end
 
   test "should destroy user" do
     assert_difference('User.count', -1) do

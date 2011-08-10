@@ -39,6 +39,15 @@
   		<%= f.password_field :password_confirmation, :size=>40 %>
   	</div>
   	
+  	<% if @user.is_admin %>
+  	<div>  	
+    <%= f.label :role,t('.role') %>:
+    <%= f.select :role,
+    			User::ROLE_TYPES,
+    			:prompt => t('.select') %>
+    </div>
+  	<% end %>
+  	
   	<div class = "submit">
   		<%= f.submit t('.submit') %>
   	</div>  
@@ -49,5 +58,4 @@
 </div>
 
 
-<%= link_to t('.show'), @user %> |
-<%= link_to t('.back'), users_path %>
+<%= link_to t('.back'), @user %> 

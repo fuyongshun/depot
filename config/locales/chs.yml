@@ -46,12 +46,14 @@ chs:
       help:      "帮助"
       order:     "订单"
       user:      "用户"
+      usercenter: "用户中心 "
+      editprofile: "编辑个人资料"
       category:  "分类"
       product:   "商品"
       logout:    "退出"
       some:      "主页> 实用书架"
       personal:  "个人空间"
-      copywrite: "© 2011 舍记小组. 版权所有"
+      copywrite: "Copyright © 2011 舍记小组. 版权所有"
 
   addresses:
     index:
@@ -99,12 +101,13 @@ chs:
       title:      "新建用户"
       back:       "返回"
     form:
-      title:      "输入您的详细信息"
-      name:       "用户名:"
-      email:      "电子邮箱："
-      password:   "密码:"
-      confirm:    "确认密码:"
-      submit:     "确认添加"
+      title:       "输入您的详细信息"
+      name:        "用户名:"
+      email:       "电子邮箱："
+      password:    "密码:"
+      confirm:     "确认密码:"
+      select:      "选择角色"
+      submit:      "确认添加"
     edit:
       title1:      "编辑修改用户"
       title1:      "输入详细信息"
@@ -112,6 +115,8 @@ chs:
       email:       "电子邮箱："
       password:    "密码:"
       confirm:     "确认密码:"
+      role:        "角色："
+      select:      "选择角色"
       submit:      "确认更新"
       show:        "显示"
       back:        "返回"
@@ -326,11 +331,15 @@ chs:
   
   logout:             "退出"
   
+  nopermission:         "您没有权限."
+  
   plog:                "请先登录"
  
   invalid:             "用户名/密码错误或者不匹配"
   
   signup:             "注册成功；欢迎您！"
+  
+  login:             "登录成功。欢迎您！"
   
   success:            " 被成功地创建."
   

@@ -156,15 +156,23 @@
     										<% end %>
     									</div>
     									<% if session[:user_id] %>
-    										<% if User.find(session[:user_id]).role == 1%>
+    										<% user = User.find(session[:user_id]) %>
+    										<% if user.is_admin%>
 			  					    			<br />
 			 					    			<%= link_to t('.order'), orders_path %><br />
 								    			<%= link_to t('.product'), products_path %><br />
-								    			<%= link_to t('.user'), users_path %><br />	
-								    			<br />
-								  		<% end %>
-								  		<%= link_to t('.logout'), logout_path, :method => :delete %>
-						  	    		<% end %>	
+								    			<%= link_to t('.user'), users_path %><br />									    											  											  											  				
+								  			<% end %>
+								  			<br />
+								  			<%= link_to t('.usercenter'), user %><br />
+								  			<%= link_to t('.editprofile'), edit_user_path(user) %><br />
+								  			<br />
+								  			<%= link_to t('.logout'), logout_path, :method => :delete %>							  												  			
+								  		<% else %>
+								  			<br />
+								  			<%= link_to t('.login'), login_path %><br />
+								  			<%= link_to t('.signup'), signup_path %><br />	
+						  	    		<% end %>
     								</div>
     							</div>
     						</div>

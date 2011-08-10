@@ -1,6 +1,16 @@
 class User < ActiveRecord::Base
   has_many :comments
-	validates :name, :presence => true, :uniqueness => true
+  
+	ROLE_TYPES = ["Administrator","Register_User"]
+  
+  validates :name,  :presence => true,
+                    :uniqueness => true,
+                    :length => {:minimum => 1, :maximum => 254} 
+                    
+  validates :email, :presence => true,  
+                    :length => {:minimum => 3, :maximum => 254}, 
+                    :uniqueness => true, 
+                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i} 
 
 	validates :password, :confirmation => true
 	attr_accessor :password_confirmation
@@ -16,31 +26,16 @@ class User < ActiveRecord::Base
 		end
 	end
        
-  #Get user's allowed requests uri  
-=begin 
-  def permission_urls   
-     user_urls = {"/products/index",
-                  "/products/edit",
-                  "/products/show",
-                  "/products/new",
-                  "/carts/index",
-                  "/carts/edit",
-                  "/carts/show",
-                  "/carts/new",
-                  "/line_items/index",
-                  "/line_items/edit",
-                  "/line_items/show",
-                  "/line_items/new",
-                  "/orders/index",
-                  "/orders/edit",
-                  "/orders/show",
-                  "/orders/new",
-                  "/users/index",
-                  "/users/edit",
-                  "/users/show",
-                  "/admin/index"}    
-  end  
-=end
+  #user management------------
+  def is_admin
+    role == 'Administrator'
+  end
+  
+  def is_user
+    role == 'Register_User'
+  end
+  
+  #------------------
 
 	class << self
 		def authenticate(name, password)
