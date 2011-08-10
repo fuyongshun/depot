@@ -41,7 +41,7 @@
   	
   	<% if @user.is_admin %>
   	<div>  	
-    <%= f.label :role,t('.role') %>:
+    <%= f.label :role,t('.role') %>
     <%= f.select :role,
     			User::ROLE_TYPES,
     			:prompt => t('.select') %>

@@ -40,7 +40,7 @@
   	
   	<% if session[:user_id] and User.find(session[:user_id]).is_admin %>
   	<div>  	
-    <%= f.label :role,t('.role') %>:
+    <%= f.label :role,t('.role') %>
     <%= f.select :role,
     			User::ROLE_TYPES,
     			:prompt => t('.select') %>
