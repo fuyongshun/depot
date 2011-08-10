@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       if user.is_admin
         redirect_to admin_url
       else
-        redirect_to store_url, :notice => "Successfully login. Welcome."
+        redirect_to $last_url || store_url, :notice => "Successfully login. Welcome."
       end
     else
       redirect_to login_url, :notice => I18n.t('.invalid')
@@ -23,8 +23,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    # cart = Cart.find(session[:cart_id])
-    # cart.destroy
     session[:user_id] = nil
     redirect_to store_url, :notice=>I18n.t('.logout')
   end

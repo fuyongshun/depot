@@ -61,7 +61,7 @@ class UsersController < ApplicationController
         # if the user has been login, that means he is admin
         unless login_as_admin
           session[:user_id] = @user.id
-          format.html { redirect_to(store_path, 
+          format.html { redirect_to($last_url || store_url, 
             :notice => I18n.t('.signup')) }
           format.xml  { render :xml => @user, 
             :status => :created, :location => @user }
