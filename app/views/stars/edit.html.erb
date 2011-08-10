@@ -1,6 +1,6 @@
-<h1>Editing star</h1>
+<h1><%= t('.title')%></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @star %> |
-<%= link_to 'Back', stars_path %>
+<%= link_to t('.show'), @star %> |
+<%= link_to t('.back'), stars_path %>

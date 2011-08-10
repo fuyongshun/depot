@@ -136,6 +136,36 @@ chs:
       password:   "密码："
       login:      "登录"
       signup:     "注册"
+
+  stars:
+    index:
+      title:      "星级评论列表"
+      product:    "商品"
+      user:       "评论用户"
+      grade:      "等级"
+      show:       "显示"
+      edit:       "编辑"
+      destroy:    "删除"
+      ifsure:     "确定删除？"
+      new:        "新建星级等级"
+    new:
+      title:      "新建星级等级"
+      back:       "返回"
+    show:
+      product:    "商品:"
+      user:       "评论用户:"
+      grade:      "等级:"
+      back:       "返回"
+      edit:       "编辑"
+    edit:
+      title:      "编辑修改等级"
+      back:       "返回"
+      show:       "展示"
+    form:
+      product:    "商品:"
+      user:       "评论用户:"
+      grade:      "等级:"
+      submit:     "添加等级"
       
   store:
     index:
@@ -347,4 +377,8 @@ chs:
   
   success1:            " 被成功的更新！."
   
-  delete:              "被删除"
+  delete:              "被删除"  
+  
+  starsuccess:          "等级创建成功."
+  
+  starsuccess1:         "等级更新成功."

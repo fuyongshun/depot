@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Product:</b>
+  <b><%= t('.product')%></b>
   <%= @star.product_id %>
 </p>
 
 <p>
-  <b>User:</b>
+  <b><%= t('.user')%></b>
   <%= @star.user_id %>
 </p>
 
 <p>
-  <b>Grade:</b>
+  <b><%= t('.grade')%></b>
   <%= @star.grade %>
 </p>
 
 
-<%= link_to 'Edit', edit_star_path(@star) %> |
-<%= link_to 'Back', stars_path %>
+<%= link_to t('.edit'), edit_star_path(@star) %> |
+<%= link_to t('.back'), stars_path %>

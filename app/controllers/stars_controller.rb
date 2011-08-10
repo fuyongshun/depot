@@ -54,7 +54,7 @@ class StarsController < ApplicationController
 
     respond_to do |format|
       if @star.save
-        format.html { redirect_to(@star, :notice => 'Star was successfully created.') }
+        format.html { redirect_to(@star, :notice => I18n.t('.starsuccess')) }
         format.xml  { render :xml => @star, :status => :created, :location => @star }
       else
         format.html { render :action => "new" }
@@ -70,7 +70,7 @@ class StarsController < ApplicationController
 
     respond_to do |format|
       if @star.update_attributes(params[:star])
-        format.html { redirect_to(@star, :notice => 'Star was successfully updated.') }
+        format.html { redirect_to(@star, :notice => I18n.t('.starsuccess1')) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

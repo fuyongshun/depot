@@ -34,12 +34,12 @@ en:
   layouts:
     application:
       head:      "Pragprog Books Online Stroe"
-      title:     "Publicaciones de Pragmatic"
+      title:     "Pragmativ Bookshelf"
       home:      "Home"
       book:      "Books"
       activity:  "Activity"
       rank:      "Rank"
-      help:      "Guide"
+      help:      "Help"
       login:     "Login"
       signup:    "Sign Up"
       order:     "Orders"
@@ -99,11 +99,11 @@ en:
       title:      "New User"
       back:       "Back"
     form:
-      title:       "Enter User Details"
-      name:        "Nmae:"
-      email:       "E-Mail："
-      password:    "Password:"
-      confirm:     "Confirm:"
+      title:      "Enter User Details"
+      name:       "Nmae:"
+      email:      "E-Mail："
+      password:   "Password:"
+      confirm:    "Confirm:"
       select:      "Select a Role"
       submit:      "Add User"
     edit:
@@ -134,6 +134,36 @@ en:
       password:   "Password："
       login:      "Login"
       signup:     "Sign Up"
+
+  stars:
+    index:
+      title:      "Listing stars"
+      product:    "Product"
+      user:       "User"
+      grade:      "Grade"
+      show:       "Show"
+      edit:       "Edit"
+      destroy:    "Destroy"
+      ifsure:     "Are you sure?"
+      new:        "New Star"
+    new:
+      title:      "New star"
+      back:       "Back"
+    show:
+      product:    "Product:"
+      user:       "User:"
+      grade:      "Grade:"
+      back:       "Back"
+      edit:       "Edit"
+    edit:
+      title:      "Editing star"
+      back:       "Back"
+      show:       "Show"
+    form:
+      product:    "Product:"
+      user:       "User:"
+      grade:      "Grade:"
+      submit:     "Add star"
       
   store:
     index:
@@ -182,8 +212,8 @@ en:
       back:       "Back"
     show:
       ycart:      "Your Cart"
-      total:      "Total:"
-      empty:      "Empty cart"
+      total:      "Total"
+      empty:      "Empty Cart"
       ifsure:     "Are you sure?"
     index:
       list:       "Listing carts"
@@ -195,15 +225,15 @@ en:
     form:
       submit:     "Update Cart"
     cart:
-      total:      "Total:"
-      empty:      "Empty cart"
+      total:      "Total"
+      empty:      "Empty Cart"
       ifsure:     "Are you sure?"
-      checkout:   "Checkout"
+      checkout:   "CHeckout"
       
   number:
     currency:
       format:
-        unit:      "$"
+        unit:      "$US"
         precision: 2
         separator: "."
         delimiter: ","
@@ -243,7 +273,7 @@ en:
       show:        "Show"
       back:        "Back"
     new:
-      legend:      "Please Enter your Detials"
+      legend:      "Please Enter your Details"
     form:
       name:        "Name"
       address:     "Address"
@@ -303,10 +333,10 @@ en:
     template:
       body:        "There are problems with the following fields:"
       header:
-        one:       "1 error prohibited this order from being saved"
-        other:     "%{count} errores prohibited this order from being saved"
+        one:       "1 error prohibited this order from being saved."
+        other:     "%{count} errores prohibited this order from being saved."
         
-  thanks:          "Thank you for your order!"
+  thanks:          "Thanks for your order!"
 
   cartcreated:     "Cart was successfully created."
   
@@ -328,15 +358,15 @@ en:
   
   logout:             "Logged out"
   
+  login:             "Successfully login. Welcome."
+  
   plog:                "Please log in"
   
-  nopermission:        "No permission."
+  nopermission:              "No permission."
  
   invalid:             "Invalid user/password combination"
   
   signup:             "Successfully Sign Up.Welcome."
-  
-  login:             "Successfully login. Welcome."
   
   success:            " was successfully created."
   
@@ -344,4 +374,8 @@ en:
   
   success1:            " was successfully updated."
   
-  delete:              "deleted"
+  delete:              "deleted"  
+  
+  starsuccess:          "Star was successfully created."
+  
+  starsuccess1:         "Star was successfully updated."
