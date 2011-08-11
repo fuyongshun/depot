@@ -100,10 +100,11 @@ en:
       back:       "Back"
     form:
       title:      "Enter User Details"
-      name:       "Nmae:"
-      email:      "E-Mail："
+      name:       "Name:"
+      email:      "E-Mail:"
       password:   "Password:"
       confirm:    "Confirm:"
+      role:       "Role:"
       select:      "Select a Role"
       submit:      "Add User"
     edit:
@@ -113,7 +114,7 @@ en:
       email:       "E-Mail："
       password:    "Password:"
       confirm:     "Confirm:"
-      role:        "Role："
+      role:        "Role:"
       select:      "Select a Role"
       submit:      "Update User"
       show:        "Show"
@@ -126,12 +127,22 @@ en:
       role:          "Role:"
       edit:          "Edit"
       back:          "Back"
+    user:
+      name:          "Name:"
+      email:         "E-mail:"
+      role:          "Role:"
 
   sessions:
     new:
       title:      "Please Log In"
       name:       "Name:"
-      password:   "Password："
+      password:   "Password:"
+      login:      "Login"
+      signup:     "Sign Up"
+    login:
+      title:      "Please Log In"
+      name:       "Name:"
+      password:   "Password:"
       login:      "Login"
       signup:     "Sign Up"
 
@@ -168,8 +179,6 @@ en:
   store:
     index:
       add:        "Add to Cart"
-      previous:   "Previous"
-      next:       "Next"
 
   line_items:
     index:
@@ -185,7 +194,7 @@ en:
       title:      "New line_item"
       back:       "Back"
     show:
-      product:    "Product："
+      product:    "Product:"
       cart:       "Cart："
       edit:       "Edit"
       back:       "Back"

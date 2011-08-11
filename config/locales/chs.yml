@@ -101,21 +101,21 @@ chs:
       title:      "新建用户"
       back:       "返回"
     form:
-      title:       "输入您的详细信息"
-      name:        "用户名:"
-      email:       "电子邮箱："
-      password:    "密码:"
-      confirm:     "确认密码:"
-      select:      "选择角色"
-      submit:      "确认添加"
+      title:      "输入您的详细信息"
+      name:       "用户名:"
+      email:      "电子邮箱:"
+      password:   "密码:"
+      confirm:    "确认密码:"
+      role:       "用户权限:"
+      submit:     "确认添加"
     edit:
       title1:      "编辑修改用户"
       title2:      "输入详细信息"
       name:        "姓名:"
-      email:       "电子邮箱："
+      email:       "电子邮箱:"
       password:    "密码:"
       confirm:     "确认密码:"
-      role:        "角色："
+      role:        "角色:"
       select:      "选择角色"
       submit:      "确认更新"
       show:        "显示"
@@ -128,12 +128,22 @@ chs:
       role:          "角色:"
       edit:          "编辑"
       back:          "返回"
+    user:
+      name:          "用户名:"
+      email:         "电子邮箱:"
+      role:          "角色:"
 
   sessions:
     new:
       title:      "请先登录"
       name:       "用户名:"
-      password:   "密码："
+      password:   "密码:"
+      login:      "登录"
+      signup:     "注册"
+    login:
+      title:      "请先登录"
+      name:       "用户名:"
+      password:   "密码:"
       login:      "登录"
       signup:     "注册"
 
@@ -185,7 +195,7 @@ chs:
       title:      "新建项"
       back:       "返回"
     show:
-      product:    "产品："
+      product:    "产品:"
       cart:       "购物车:"
       edit:       "编辑"
       back:       "返回"

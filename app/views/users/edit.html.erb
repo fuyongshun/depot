@@ -20,8 +20,14 @@
   	<legend><%= t('.title2')%></legend>
   	
   	<div>
+<<<<<<< HEAD
   		<%= f.label :name,t('.name') %>
   		<%= f.text_field :name, :size => 40, :disabled => true  %>
+=======
+  		<%= f.label :name,t('.name') %> 
+  		&nbsp;<b><%= @user.name %></b>
+		<br />
+>>>>>>> b5932b36c68bddc24b279edfd2e7d8ba3e5e683c
   	</div>
   	
   	<div>
@@ -59,3 +65,6 @@
 
 
 <%= link_to t('.back'), @user %> 
+
+<br />
+

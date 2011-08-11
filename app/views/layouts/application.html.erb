@@ -23,9 +23,16 @@
 		</object>
 
 		<%= form_tag store_path, :class => 'locale' do %>
-			<a href = "/login"><%= t('.login')%></a>
-			&nbsp;|&nbsp;
-			<a href = "signup"><%= t('.signup')%></a>
+		    <% if session[:user_id] %>
+		    	<% user = User.find(session[:user_id]) %>
+		    	<%= link_to t('.usercenter'), user %>
+				&nbsp;|&nbsp;
+				<%= link_to t('.logout'), logout_path, :method => :delete %>
+		    <% else %>
+				<%= link_to t('.login'), login_path %>
+				&nbsp;|&nbsp;
+				<%= link_to t('.signup'), signup_path %>
+			<% end %>
 			&nbsp;   &nbsp;
 			<%= select_tag 'set_locale',
 				options_for_select(LANGUAGES, I18n.locale.to_s),
@@ -88,8 +95,8 @@
 				</a>
 			</td>
 			<td align = right style = "width:320px">			
-			    <form name = "searcht" id = "searcht" accept-charset="UTF-8" action="/chs/searches" method="get" text-decoration = none >
-					  			    
+			    <form name = "searcht" id = "searcht" accept-charset="UTF-8" action="/<%= I18n.locale%>/searches" 
+			    	method="get" text-decoration = none >					  			    
 					<div class = "search_field">
 						<input type = "text" class = "search_text" name = "q"/>
 						<a href="javascript:document.getElementById('searcht').submit();" style = "outline:none" class = "search_button" ></a>
@@ -102,7 +109,7 @@
 		</div>
 	</div>
 	<div id = "content">
-		<table border= "0 " cellspacing= "0 " cellpadding= "0 ">
+		<table border= "0 " cellspacing= "0 " cellpadding= "0 " >
 			<td>
 				<div id = "infomation_space">
 					<div id = "store">
@@ -164,16 +171,7 @@
 			 					    			<%= link_to t('.order'), orders_path %><br />
 								    			<%= link_to t('.product'), products_path %><br />
 								    			<%= link_to t('.user'), users_path %><br />									    											  											  											  				
-								  			<% end %>
-								  			<br />
-								  			<%= link_to t('.usercenter'), user %><br />
-								  			<%= link_to t('.editprofile'), edit_user_path(user) %><br />
-								  			<br />
-								  			<%= link_to t('.logout'), logout_path, :method => :delete %>							  												  			
-								  		<% else %>
-								  			<br />
-								  			<%= link_to t('.login'), login_path %><br />
-								  			<%= link_to t('.signup'), signup_path %><br />	
+								  			<% end %>								  										  												  			
 						  	    		<% end %>
     								</div>
     							</div>

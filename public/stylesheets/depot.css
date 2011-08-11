@@ -189,12 +189,13 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 /* Global styles */
 
 #store #notice {
-	color: #000;
-	border: 2px solid red;
-	padding: 1em;
+	color: #333333;
+	border: 2px solid #bed600;
+	text-align: center;
+	padding: 0.8em;
 	margin-bottom: 2em;
-	background-color: #f0f0f0;
-	font: bold smaller sans-serif;
+	background-color: #f6f7ea;
+	font: bold small sans-serif;
 }
 
 #store h1 {
@@ -376,19 +377,24 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 	margin-bottom: 10px;
 }
 
+/* Styles for the form */
 .depot_form fieldset {
-	background: #efe;
+	background: #f2f7df;
+	border: 2px solid #bed600;
+	margin-top: 2em;
 }
 
 .depot_form legend {
-	color:#dfd;
-	background: #141;
+	color:#333333;
+	border: 2px solid #bed600;
+	background: #c9e300;
 	font-family: sans-serif;
+	font-size: 135%;
 	padding: 0.2em 1em;
 }
 
 .depot_form label {
-	width: 5em;
+	width: 7em;
 	float: left;
 	text-align: right;
 	padding-top: 0.2em;
@@ -401,12 +407,18 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 }
 
 .depot_form .submit {
-	margin-left: 0.4em;
+	margin-left: 7em;
+}
+
+.depot_form .link {
+	margin-left: 1em;
 }
 
 .depot_form div {
 	margin: 0.5em 0;
 }
+
+/*************************************/
 
 .locale {
 	float: right;

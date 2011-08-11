@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_filter :authorize
   before_filter :admin_authorize
+  before_filter :store_location
   before_filter :set_i18n_locale_from_params
   
   protect_from_forgery
@@ -52,6 +53,11 @@ class ApplicationController < ActionController::Base
     end
 
   	
+  	def store_location
+      if request.get? and controller_name != "users" and controller_name != "sessions"    
+        $last_url = request.url
+      end
+    end 
   	
   	def set_i18n_locale_from_params
       if params[:locale]

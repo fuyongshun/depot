@@ -84,7 +84,7 @@ es:
       position:  "Position"
       zip:       "Zip"
       phone:     "Phone"
-      submit:      "Create Address"
+      submit:    "Create Address"
 
   users:
     index:
@@ -100,10 +100,11 @@ es:
       back:       "Back"
     form:
       title:      "Enter User Details"
-      name:       "Nmae:"
-      email:      "E-Mail："
+      name:       "Name:"
+      email:      "E-Mail:"
       password:   "Password:"
       confirm:    "Confirm:"
+      role:       "Role:"
       select:      "Select a Role"
       submit:      "Add User"
     edit:
@@ -113,7 +114,7 @@ es:
       email:       "E-Mail："
       password:    "Password:"
       confirm:     "Confirm:"
-      role:        "Role："
+      role:        "Role:"
       select:      "Select a Role"
       submit:      "Update User"
       show:        "Show"
@@ -126,12 +127,22 @@ es:
       role:          "Role:"
       edit:          "Edit"
       back:          "Back"
+    user:
+      name:          "Name:"
+      email:         "E-mail:"
+      role:          "Role:"
 
   sessions:
     new:
       title:      "Please Log In"
       name:       "Name:"
-      password:   "Password："
+      password:   "Password:"
+      login:      "Login"
+      signup:     "Sign Up"
+    login:
+      title:      "Please Log In"
+      name:       "Name:"
+      password:   "Password:"
       login:      "Login"
       signup:     "Sign Up"
 
@@ -167,7 +178,7 @@ es:
       
   store:
     index:
-      add:        "Añadir al Carrito"
+      add:        "A&ntilde;adir al Carrito"
 
   line_items:
     index:
@@ -314,7 +325,7 @@ es:
   searches:
     index:
       title:        "Search Result"
-      add:          "Add to Cart"
+      add:          "A&ntilde;adir al Carrito"
       
   activerecord:
     errors:
