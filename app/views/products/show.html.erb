@@ -14,7 +14,7 @@
 
 <p>
   <b><%= t('.imageurl')%></b>
-  <img src="<%= @product.image_url %>"/>
+  <%= image_tag(@product.image_url) %>
 </p>
 
 <p>
@@ -22,6 +22,7 @@
   <%= @product.price %>
 </p>
 <br />
+<% if session[:user_id] %>
 <p>
 	<div id="star_wrap">
 	<ul id="star_list">
@@ -89,3 +90,4 @@
 
 <%= link_to t('.edit'), edit_product_path(@product) %> |
 <%= link_to t('.back'), products_path %>
+<% end %>
