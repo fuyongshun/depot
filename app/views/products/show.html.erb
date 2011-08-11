@@ -14,7 +14,7 @@
 
 <p>
   <b><%= t('.imageurl')%></b>
-  <img src="<%= @product.image_url %>"/>
+  <%= image_tag(@product.image_url) %>
 </p>
 
 <p>
