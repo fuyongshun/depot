@@ -166,9 +166,11 @@
     										<% user = User.find(session[:user_id]) %>
     										<% if user.is_admin%>
 			  					    			<br />
-			 					    			<%= link_to t('.order'), orders_path %><br />
+			 					    			<%= link_to t('.category'), categories_path %><br />
 								    			<%= link_to t('.product'), products_path %><br />
-								    			<%= link_to t('.user'), users_path %><br />									    											  											  											  				
+								    			<%= link_to t('.star'), stars_path %><br />
+								    			<%= link_to t('.user'), users_path %><br />
+								    			<%= link_to t('.order'), orders_path %><br />								    											  											  											  				
 								  			<% end %>								  										  												  			
 						  	    		<% end %>
     								</div>
