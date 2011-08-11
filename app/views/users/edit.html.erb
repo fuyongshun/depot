@@ -20,28 +20,28 @@
   	<legend><%= t('.title2')%></legend>
   	
   	<div>
-  		<%= f.label :name,t('.name') %>:
+  		<%= f.label :name,t('.name') %>
   		<%= f.text_field :name, :size => 40, :disabled => true  %>
   	</div>
   	
   	<div>
-  		<%= f.label :email,t('.email') %>:
+  		<%= f.label :email,t('.email') %>
   		<%= f.text_field :email, :size=>40 %>
   	</div>
   	
   	<div>
-  		<%= f.label :password, t('.password') %>:
+  		<%= f.label :password, t('.password') %>
   		<%= f.password_field :password, :size=>40 %>
   	</div>
   	
   	<div>
-  		<%= f.label :password_confirmation, t('.confirm') %>:
+  		<%= f.label :password_confirmation, t('.confirm') %>
   		<%= f.password_field :password_confirmation, :size=>40 %>
   	</div>
   	
   	<% if @user.is_admin %>
   	<div>  	
-    <%= f.label :role,t('.role') %>:
+    <%= f.label :role,t('.role') %>
     <%= f.select :role,
     			User::ROLE_TYPES,
     			:prompt => t('.select') %>

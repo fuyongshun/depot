@@ -87,8 +87,9 @@
 					</div>
 				</a>
 			</td>
-			<td align = right style = "width:320px">
-				<form name = "searcht" id = "searcht" accept-charset="UTF-8" action="/en/searches" method="get" text-decoration = none >
+			<td align = right style = "width:320px">			
+			    <form name = "searcht" id = "searcht" accept-charset="UTF-8" action="/chs/searches" method="get" text-decoration = none >
+					  			    
 					<div class = "search_field">
 						<input type = "text" class = "search_text" name = "q"/>
 						<a href="javascript:document.getElementById('searcht').submit();" style = "outline:none" class = "search_button" ></a>
@@ -113,6 +114,7 @@
     			</td>
     			<td>
     				<div id="category">
+    					
 		    			<ul>
 		    			<% if @categories %>
 		    			  <%= hidden_div_if(@categories.empty?, :id => "category") do %>

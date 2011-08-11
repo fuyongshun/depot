@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_filter :authorize
   before_filter :admin_authorize
   before_filter :set_i18n_locale_from_params
+  
   protect_from_forgery
   
   private  
@@ -66,4 +67,5 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { :locale => I18n.locale }
   end
+  
 end

@@ -108,7 +108,7 @@ es:
       submit:      "Add User"
     edit:
       title1:      "Editing user"
-      title1:      "Enter User Details"
+      title2:      "Enter User Details"
       name:        "Nmae:"
       email:       "E-Mail："
       password:    "Password:"
