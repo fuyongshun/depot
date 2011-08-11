@@ -23,9 +23,16 @@
 		</object>
 
 		<%= form_tag store_path, :class => 'locale' do %>
-			<a href = "/login"><%= t('.login')%></a>
-			&nbsp;|&nbsp;
-			<a href = "signup"><%= t('.signup')%></a>
+		    <% if session[:user_id] %>
+		    	<% user = User.find(session[:user_id]) %>
+		    	<%= link_to t('.usercenter'), user %>
+				&nbsp;|&nbsp;
+				<%= link_to t('.logout'), logout_path, :method => :delete %>
+		    <% else %>
+				<%= link_to t('.login'), login_path %>
+				&nbsp;|&nbsp;
+				<%= link_to t('.signup'), signup_path %>
+			<% end %>
 			&nbsp;   &nbsp;
 			<%= select_tag 'set_locale',
 				options_for_select(LANGUAGES, I18n.locale.to_s),
@@ -162,16 +169,7 @@
 			 					    			<%= link_to t('.order'), orders_path %><br />
 								    			<%= link_to t('.product'), products_path %><br />
 								    			<%= link_to t('.user'), users_path %><br />									    											  											  											  				
-								  			<% end %>
-								  			<br />
-								  			<%= link_to t('.usercenter'), user %><br />
-								  			<%= link_to t('.editprofile'), edit_user_path(user) %><br />
-								  			<br />
-								  			<%= link_to t('.logout'), logout_path, :method => :delete %>							  												  			
-								  		<% else %>
-								  			<br />
-								  			<%= link_to t('.login'), login_path %><br />
-								  			<%= link_to t('.signup'), signup_path %><br />	
+								  			<% end %>								  										  												  			
 						  	    		<% end %>
     								</div>
     							</div>
