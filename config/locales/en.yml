@@ -127,9 +127,19 @@ en:
       role:          "Role:"
       edit:          "Edit"
       back:          "Back"
+    user:
+      name:          "Name:"
+      email:         "E-mail:"
+      role:          "Role:"
 
   sessions:
     new:
+      title:      "Please Log In"
+      name:       "Name:"
+      password:   "Password:"
+      login:      "Login"
+      signup:     "Sign Up"
+    login:
       title:      "Please Log In"
       name:       "Name:"
       password:   "Password:"

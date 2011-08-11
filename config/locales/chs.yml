@@ -128,9 +128,19 @@ chs:
       role:          "角色:"
       edit:          "编辑"
       back:          "返回"
+    user:
+      name:          "用户名:"
+      email:         "电子邮箱:"
+      role:          "角色:"
 
   sessions:
     new:
+      title:      "请先登录"
+      name:       "用户名:"
+      password:   "密码:"
+      login:      "登录"
+      signup:     "注册"
+    login:
       title:      "请先登录"
       name:       "用户名:"
       password:   "密码:"
