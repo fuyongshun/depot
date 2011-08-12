@@ -117,9 +117,8 @@
 				@products = Product.all
 			end
 			@products.each do |product| %>
-			<DIV class=slide><A href="#" target=_blank>
-			<%= image_tag(product.image_url, :class => 'diapo' ) %></A> 
-		
+			<DIV class=slide>
+			<%= link_to image_tag(product.image_url, :class => 'diapo' ), product %> 		
 			<DIV class=text>舍记</DIV></DIV>
 			<% end %>
 		</DIV>
