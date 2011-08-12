@@ -16,4 +16,4 @@
 	</div>
 <% end %>
 
-<p><%= will_paginate @products %></p>
+<p><%= will_paginate @products,:prev_label=> t('.previous'),:next_label=> t('.next')%></p>

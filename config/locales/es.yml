@@ -3,11 +3,14 @@ es:
   products:
     index:
       title:      "Listing products"
+      price:       "Price"
       show:       "Show"
       edit:       "Edit"
       destroy:    "Destroy"
       product:    "New Product"
       ifsure:     "Are you sure?"
+      previous:   "Previous"
+      next:       "Next"
     edit:
       title:      "Editing Products"
       show:       "Show"
@@ -46,7 +49,8 @@ es:
       user:      "Users"
       usercenter: "User Center"
       editprofile: "Edit Profile"
-      category:  "categories"
+      category:  "Ctegories"      
+      star:         "Star"
       product:   "Products"
       logout:    "Logout"
       some:      "home > your pragmatic catalog"
@@ -179,6 +183,8 @@ es:
   store:
     index:
       add:        "A&ntilde;adir al Carrito"
+      previous:   "Previous"
+      next:       "Next"
 
   line_items:
     index:
@@ -270,6 +276,8 @@ es:
       destroy:     "Destory"
       ifsure:      "Are you sure?"
       neworder:    "New Order"
+      previous:   "Previous"
+      next:       "Next"
     show:
       name:        "Name:"
       address:     "Address:"

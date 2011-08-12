@@ -6,11 +6,14 @@ chs:
   products:
     index:
       title:      "商品列表"
+      price:       "价格"
       show:       "显示"
       edit:       "编辑"
       destroy:    "删除"
       product:    "新建商品"
       ifsure:     "确定删除?"
+      previous:   "上一页"
+      next:       "下一页"
     edit:
       title:      "编辑商品中"
       show:       "显示"
@@ -44,12 +47,13 @@ chs:
       login:     "登录"
       signup:    "注册"
       help:      "帮助"
-      order:     "订单"
-      user:      "用户"
+      order:     "订单列表"
+      user:      "用户列表"
       usercenter: "用户中心 "
       editprofile: "编辑个人资料"
-      category:  "分类"
-      product:   "商品"
+      category:  "商品分类"
+      star:      "星级评论"
+      product:   "商品列表"
       logout:    "退出"
       some:      "主页> 实用书架"
       personal:  "个人空间"
@@ -180,6 +184,8 @@ chs:
   store:
     index:
       add:        "加到购物车"
+      previous:   "上一页"
+      next:       "下一页"
 
   line_items:
     index:
@@ -271,6 +277,8 @@ chs:
       destroy:     "删除"
       ifsure:      "确定删除?"
       neworder:    "新订单"
+      previous:   "上一页"
+      next:       "下一页"
     show:
       name:        "姓名:"
       address:     "地址:"
