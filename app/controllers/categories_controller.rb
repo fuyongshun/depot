@@ -26,6 +26,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   # GET /categories/new.xml
   def new
+    @categories = Category.all
     @category = Category.new
 
     respond_to do |format|

@@ -31,6 +31,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   # GET /products/new.xml
   def new
+    @categories = Category.all
     @product = Product.new
 
     respond_to do |format|
