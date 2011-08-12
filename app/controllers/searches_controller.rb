@@ -5,6 +5,7 @@ class SearchesController < ApplicationController
     if params[:q]
       @results = Product.search(params[:q])
     end
+    render :layout => false
   end
   
 end
