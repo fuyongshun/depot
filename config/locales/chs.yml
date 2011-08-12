@@ -12,6 +12,8 @@ chs:
       destroy:    "删除"
       product:    "新建商品"
       ifsure:     "确定删除?"
+      previous:   "上一页"
+      next:       "下一页"
     edit:
       title:      "编辑商品中"
       show:       "显示"
@@ -182,6 +184,8 @@ chs:
   store:
     index:
       add:        "加到购物车"
+      previous:   "上一页"
+      next:       "下一页"
 
   line_items:
     index:
@@ -273,6 +277,8 @@ chs:
       destroy:     "删除"
       ifsure:      "确定删除?"
       neworder:    "新订单"
+      previous:   "上一页"
+      next:       "下一页"
     show:
       name:        "姓名:"
       address:     "地址:"

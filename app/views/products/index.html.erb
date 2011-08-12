@@ -31,6 +31,6 @@
 
 <br />
 <%= link_to t('.product'), new_product_path %>
-<p><%= will_paginate @products %></p>
+<p><%= will_paginate @products,:prev_label=> t('.previous'),:next_label=> t('.next') %></p>
 
 
