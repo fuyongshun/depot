@@ -246,6 +246,12 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 	//
 	border-bottom: 3px dotted #77d;
 }
+
+.image_size{
+	width: 240px;
+	height: 280px;
+	margin-right: 3px;
+}
 /* Styles for products/index */
 
 #product_list table {
