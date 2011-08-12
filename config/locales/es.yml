@@ -3,6 +3,7 @@ es:
   products:
     index:
       title:      "Listing products"
+      price:       "Price"
       show:       "Show"
       edit:       "Edit"
       destroy:    "Destroy"
@@ -46,7 +47,8 @@ es:
       user:      "Users"
       usercenter: "User Center"
       editprofile: "Edit Profile"
-      category:  "categories"
+      category:  "Ctegories"      
+      star:         "Star"
       product:   "Products"
       logout:    "Logout"
       some:      "home > your pragmatic catalog"
