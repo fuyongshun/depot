@@ -9,7 +9,7 @@
 
 <p>
   <b><%= t('.description')%></b>
-  <%= strip_tags(@product.description) %>
+  <%= @product.description.html_safe %>
 </p>
 
 <p>

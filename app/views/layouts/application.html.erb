@@ -45,44 +45,48 @@
 	<div id = "pagemenu">
 		<table>
 			<td>
-				<a href = "/<%= I18n.locale %>" class = "menu_button" unselectable="on" onselectstart="return false">
+				<a href = "javascript:void(0);" class = "menu_button" unselectable="on" onselectstart="return false" 
+					id = "menu_button_home" onclick = "set_menu_button('home')">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<div class = "bottom_text">	<%= t('.home')%>	</div>
 						<div class = "top_text">	<%= t('.home')%>	</div>
 					</div>
-				</a>
+				</a>				
 			</td>
 			<td>
-				<a href = "/<%= I18n.locale %>/products" class = "menu_button" unselectable="on" onselectstart="return false">
+				<a href = "javascript:void(0);" class = "menu_button" unselectable="on" onselectstart="return false" 
+					id = "menu_button_books" onclick = "set_menu_button('books')">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<div class = "bottom_text">	<%= t('.book')%>	</div>
 						<div class = "top_text">	<%= t('.book')%>	</div>
 					</div>
-				</a>
+				</a>		
 			</td>
 			<td>
-				<a href = "#" class = "menu_button" unselectable="on" onselectstart="return false">
-					<div class = "item_name">
-						&nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;
-						<div class = "bottom_text">	<%= t('.activity')%>	</div>
-						<div class = "top_text">	<%= t('.activity')%>	</div>
-					</div>
-				</a>
-			</td>
-			<td>
-				<a href = "#" class = "menu_button" unselectable="on" onselectstart="return false">
+				<a href = "javascript:void(0);" class = "menu_button" unselectable="on" onselectstart="return false" 
+					id = "menu_button_rank" onclick = "set_menu_button('rank')">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<div class = "bottom_text">	<%= t('.rank')%>	</div>
 						<div class = "top_text">	<%= t('.rank')%>	</div>
 					</div>
-				</a>
+				</a>		
+			</td>
+			<td>
+				<a href = "javascript:void(0);" class = "menu_button" unselectable="on" onselectstart="return false" 
+					id = "menu_button_contect" onclick = "set_menu_button('contect')">
+					<div class = "item_name">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<div class = "bottom_text">	<%= t('.contect')%>	</div>
+						<div class = "top_text">	<%= t('.contect')%>	</div>
+					</div>
+				</a>		
 			</td>
 			<td>
 				<a href = "/guide/index.htm" class = "menu_button" unselectable="on" onselectstart="return false">
@@ -94,16 +98,13 @@
 					</div>
 				</a>
 			</td>
-			<td align = right style = "width:320px">			
-			    <form name = "searcht" id = "searcht" accept-charset="UTF-8" 
-			       action="/<%= I18n.locale%>/searches" 
-			    	method="get" text-decoration = none >					  			    
-					<div class = "search_field">
-						<input type = "text" class = "search_text" name = "q"/>
-						<a href="javascript:document.getElementById('searcht').submit();" 
-						       style = "outline:none" class = "search_button" ></a>
-					</div>
-				</form>						
+			<td align = right style = "width:320px">					  			    
+					<div class = "search_field" accept-charset="UTF-8" >
+						<input type = "text" class = "search_text" name = "q_text" id = "q_text" />
+						<a href="javascript:void(0);" style = "outline:none" class = "search_button" onclick="new Ajax.Updater(
+   						'main', '/searches?q=' + document.getElementById('q_text').value, {method:'get', asynchronous:true, evalScripts:true }); 
+						return false;"></a>
+					</div>					
 			</td>
 		</table>
 		<div id = "page_location">
@@ -201,6 +202,10 @@
     							</div>
     						</div>
     						<div id = "nonius">
+    							<div id = "nonius_border">
+    								<div id = "nonius_text">
+    								</div>
+    							</div>
     						</div>
     						<div id = "personal_menu">
     							<table>
@@ -245,12 +250,32 @@
 
 <script>
 	var nonius = document.getElementById("nonius");
-	if(!nonius.style.left){
+	var nonius_text = document.getElementById("nonius_text");
+	if(get_cookie_value("menu_number") == ""){
 		nonius.style.left = "11px";
+	}else{
+		var nm = parseInt(get_cookie_value("menu_number"));
+		nonius.style.left = "" + (11 + 63 * nm) + "px";
+		nonius_text.style.left = "" + -63 * nm + "px";
 	}
 
 	var hide_button = document.getElementById("hide_button");
 	var show_button = document.getElementById("show_button");
-	show_button.hide();
 	var personal = document.getElementById("personal_space");
+
+	if(get_cookie_value("personal_space") != "false"){
+		if(get_cookie_value("personal_space") == "")
+			set_cookie_value("personal_space", "true");
+		show_button.hide();		
+	}else{
+		personal.style.width = "25px";
+		hide_button.hide();
+	}
+
+	if(get_cookie_value("page_location") == ""){
+		set_cookie_value("page_location", "home >");
+		set_page_location("home >");
+	}
+
+	var old_menu_button = document.getElementById("menu_button_home");
 </script>
