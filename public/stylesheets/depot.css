@@ -518,13 +518,13 @@ z-index: 2;
 #star_list li.one-star.current-rating,#star_list li.two-stars.current-rating{background-position:0 -116px;}
 #star_list .three-stars .current-rating,#star_list .four-stars .current-rating,#star_list .five-stars .current-rating{background-position:0 -28px;}
 #center {
-	Z-INDEX: 2;position:relative;height:400px;
+	Z-INDEX: 2;position:relative;height:267px;
 }
 #slider {
-	Z-INDEX: 1; BORDER-BOTTOM: #000 20px solid; POSITION: absolute; BORDER-LEFT: #000 20px solid; WIDTH: 860px; BACKGROUND: #000; HEIGHT: 333px; OVERFLOW: hidden; BORDER-TOP: #000 20px solid; BORDER-RIGHT: #000 20px solid; 
+	Z-INDEX: 1; BORDER-BOTTOM: #000 20px solid; POSITION: absolute; BORDER-LEFT: #000 20px solid; WIDTH: 860px; BACKGROUND: #000; HEIGHT: 200px; OVERFLOW: hidden; BORDER-TOP: #000 20px solid; BORDER-RIGHT: #000 20px solid; 
 }
 #slider .slide {
-	Z-INDEX: 10; POSITION: absolute; BORDER-LEFT: #000 1px solid; WIDTH: 520px; BACKGROUND: #000; HEIGHT: 333px; OVERFLOW: hidden; CURSOR: default;
+	Z-INDEX: 10; POSITION: absolute; BORDER-LEFT: #000 1px solid; WIDTH: 520px; BACKGROUND: #000; HEIGHT: 200px; OVERFLOW: hidden; CURSOR: default;
 }
 #slider .title {
 	COLOR: #f80; FONT-SIZE: 1.2em; FONT-WEIGHT: bold; MARGIN-RIGHT: 1.5em; TEXT-DECORATION: none
