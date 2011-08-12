@@ -26,6 +26,10 @@
 </table>
 
 <br />
-<%= link_to t('.neworder'), new_order_path %>
 
-<p><%= will_paginate @orders ,:prev_label=> t('.previous'),:next_label=> t('.next')%></p>
+<p><%= will_paginate @products,
+       :prev_label=> t('.previous'),
+	   :next_label=> t('.next')%>
+</p>
+
+<%= link_to t('.neworder'), new_order_path %>

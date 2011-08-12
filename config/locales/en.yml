@@ -36,26 +36,26 @@ en:
 
   layouts:
     application:
-      head:      "Pragprog Books Online Stroe"
-      title:     "Pragmativ Bookshelf"
-      home:      "Home"
-      book:      "Books"
-      activity:  "Activity"
-      rank:      "Rank"
-      help:      "Help"
-      login:     "Login"
-      signup:    "Sign Up"
-      order:     "Orders"
-      user:      "Users"
-      usercenter: "User Center"
-      editprofile: "Edit Profile"
-      category:    "Categories"
+      head:         "Pragprog Books Online Stroe"
+      title:        "Pragmativ Bookshelf"
+      home:         "Home"
+      book:         "Books"
+      activity:     "Activity"
+      rank:         "Rank"
+      help:         "Help"
+      login:        "Login"
+      signup:       "Sign Up"
+      order:        "Orders"
+      user:         "Users"
+      usercenter:   "User Center"
+      editprofile:  "Edit Profile"
+      category:     "Categories"
       star:         "Star"
-      product:   "Products"
-      logout:    "Logout"
-      some:      "home > your pragmatic catalog"
-      personal:  "personal space"
-      copywrite: "Copyright © 2011 Sheji Team. All Rights Reserved"
+      product:      "Products"
+      logout:       "Logout"
+      some:         "home > your pragmatic catalog"
+      personal:     "personal space"
+      copywrite:    "Copyright © 2011 Sheji Team. All Rights Reserved"
 
   addresses:
     index:
@@ -88,7 +88,7 @@ en:
       position:  "Position"
       zip:       "Zip"
       phone:     "Phone"
-      submit:      "Create Address"
+      submit:    "Create Address"
 
   users:
     index:
@@ -276,8 +276,8 @@ en:
       destroy:     "Destory"
       ifsure:      "Are you sure?"
       neworder:    "New Order"
-      previous:   "Previous"
-      next:       "Next"
+      previous:    "Previous"
+      next:        "Next"
     show:
       name:        "Name:"
       address:     "Address:"
