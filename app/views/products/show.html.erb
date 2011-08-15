@@ -35,6 +35,7 @@
 	</ul>
 	<span id="star_content"></span>
 	<input type="hidden" id="star_grade" name="b" value="<%if @star%><%=@star.grade%><%else%>0<%end%>" size="2" />
+	&nbsp;&nbsp;&nbsp;&nbsp;Grade: <%= @product.average_grade %>
 	</div>
 	<script>
 	var star_lock = <%if @star %>1<% else %>0<% end%>;
@@ -77,8 +78,9 @@
 			this.addClassName("current-rating");
 		}
 	}
-	</script>
+	</script>		
 </p>
+
 <br />
 <p>
 	<h1><%= t('.comment')%></h1>

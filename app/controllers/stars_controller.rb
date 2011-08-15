@@ -2,6 +2,8 @@ class StarsController < ApplicationController
   skip_before_filter :authorize, :only => [:show]
   skip_before_filter :admin_authorize => [:show]
   
+ 
+  
   # GET /stars
   # GET /stars.xml
   def index
@@ -29,7 +31,8 @@ class StarsController < ApplicationController
   def new
      if (params[:ajax])
       newstar = {"product_id" => params[:product_id], "grade" => params[:grade], "user_id" => session[:user_id]}
-      @star = Star.find(:last, :conditions => ['product_id = ? and user_id = ?', params[:product_id], session[:user_id]])
+      @star = Star.find(:last, :conditions => ['product_id = ? and user_id = ?', params[:product_id], session[:user_id]]) 
+        
       if (@star)
         @star = Star.update(@star.id,newstar)
       else
@@ -54,9 +57,11 @@ class StarsController < ApplicationController
   # POST /stars.xml
   def create
     @star = Star.new(params[:star])
-
+    
+    
     respond_to do |format|
       if @star.save
+        
         format.html { redirect_to(@star, :notice => I18n.t('.starsuccess')) }
         format.xml  { render :xml => @star, :status => :created, :location => @star }
       else
@@ -70,9 +75,10 @@ class StarsController < ApplicationController
   # PUT /stars/1.xml
   def update
     @star = Star.find(params[:id])
-
+    
     respond_to do |format|
       if @star.update_attributes(params[:star])
+
         format.html { redirect_to(@star, :notice => I18n.t('.starsuccess1')) }
         format.xml  { head :ok }
       else
