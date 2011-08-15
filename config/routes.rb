@@ -25,6 +25,7 @@ Depot::Application.routes.draw do
     resources :categories
     resources :addresses
     resources :stars
+    resources :contect
   #get "store/index"
 
   resources :products do

@@ -40,7 +40,7 @@ en:
       title:        "Pragmativ Bookshelf"
       home:         "Home"
       book:         "Books"
-      activity:     "Activity"
+      contect:      "Contect"
       rank:         "Rank"
       help:         "Help"
       login:        "Login"
@@ -53,7 +53,7 @@ en:
       star:         "Star"
       product:      "Products"
       logout:       "Logout"
-      some:         "home > your pragmatic catalog"
+      some:         "home > your pragmatic catalog >"
       personal:     "personal space"
       copywrite:    "Copyright © 2011 Sheji Team. All Rights Reserved"
 
@@ -263,6 +263,11 @@ en:
       ifsure:     "Are you sure?"
     form:
       submit:     "Add a comment"
+
+  contect:
+    index:
+      contect:     "Contact Us"
+      aboutus:      "About Us"
         
   orders:
     index:
@@ -333,7 +338,9 @@ en:
   searches:
     index:
       title:        "Search Result"
-      add:          "Add to Cart"
+      add:          "Add to Cart"      
+      previous:   "Previous"
+      next:       "Next"
       
   activerecord:
     errors:

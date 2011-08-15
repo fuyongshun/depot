@@ -40,7 +40,7 @@ es:
       title:        "Publicaciones de Pragmatic"
       home:         "Inicio"
       book:         "Books"
-      activity:     "Activity"
+      contect:      "Contect"
       rank:         "Rank"
       help:         "Help"
       login:        "Login"
@@ -53,7 +53,7 @@ es:
       star:         "Star"
       product:      "Products"
       logout:       "Logout"
-      some:         "home > your pragmatic catalog"
+      some:         "home > your pragmatic catalog >"
       personal:     "personal space"
       copywrite:    "Copyright © 2011 Sheji Team. All Rights Reserved"
 
@@ -263,6 +263,11 @@ es:
       ifsure:     "Are you sure?"
     form:
       submit:     "Add a comment"
+
+  contect:
+    index:
+      contect:     "Contact Us"
+      aboutus:      "About Us"
         
   orders:
     index:
@@ -334,6 +339,8 @@ es:
     index:
       title:        "Search Result"
       add:          "A&ntilde;adir al Carrito"
+      previous:     "Previous"
+      next:         "Next"
       
   activerecord:
     errors:
