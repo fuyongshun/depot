@@ -4,7 +4,7 @@
 	<div class="entry">
 		<%= image_tag(product.image_url) %>
 		
-		<h3><%= product.title %></h3>
+		<h3><%= link_to product.title, product %></h3>
 		
 		<%=sanitize product.description %>
 		<div class="price_line">
@@ -13,3 +13,4 @@
 		</div>
 	</div>
 <% end %>
+
