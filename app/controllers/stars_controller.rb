@@ -1,4 +1,7 @@
 class StarsController < ApplicationController
+  skip_before_filter :authorize, :only => [:show]
+  skip_before_filter :admin_authorize => [:show]
+  
   # GET /stars
   # GET /stars.xml
   def index

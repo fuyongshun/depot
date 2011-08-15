@@ -23,7 +23,7 @@
 </table>
 
 <br />
-<% if session[:user_id] %>
+
 <p>
 	<div id="star_wrap">
 	<ul id="star_list">
@@ -91,4 +91,3 @@
 
 <%= link_to t('.edit'), edit_product_path(@product) %> |
 <%= link_to t('.back'), products_path %>
-<% end %>

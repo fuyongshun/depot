@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-    skip_before_filter :admin_authorize
+    # skip_before_filter :authorize
+    skip_before_filter :admin_authorize, :only => [:create]
     def create
       @product = Product.find(params[:product_id])
       @comment = @product.comments.create(params[:comment])
