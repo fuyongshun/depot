@@ -14,13 +14,7 @@
 <body>
 <div id = "mainpart">
 	<div id = "pagehead">
-		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
-			codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" 
-			width="250" height="112">
-		<param name="movie" value="images/bookshop_online.swf" />
-		<param name="quality" value="high" />
-		<param name="wmode" value="transparent">
-		</object>
+		<embed src="images/bookshop_online.swf" wmode = "transparent" width = "250" height = "112"></embed> 
 
 		<%= form_tag store_path, :class => 'locale' do %>
 		    <% if session[:user_id] %>
@@ -229,13 +223,7 @@
     	<div id = "pagefoot">
     		<table>
     			<td>
-    				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
-					codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" 
-					width="90" height="106">
-				<param name="movie" value="images/spining-earth.swf" />
-				<param name="quality" value="high" />
-				<param name="wmode" value="transparent">
-				</object>
+    				<embed src="images/spining-earth.swf" wmode = "transparent" width = "90" height = "106"></embed> 
 			</td>
 			<td align = right style = "width:784px">
 				<div class = "right_text">
