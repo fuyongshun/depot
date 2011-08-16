@@ -40,7 +40,9 @@
 		<table>
 			<td>
 				<a href = "javascript:void(0);" class = "menu_button" unselectable="on" onselectstart="return false" 
-					id = "menu_button_home" onclick = "set_menu_button('home')">
+					id = "menu_button_home" onclick = "set_menu_button('home'); new Ajax.Updater(
+   						'main', '/store', {method:'get', asynchronous:true, evalScripts:true }); 
+						set_page_location('home >'); return false;">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
@@ -51,7 +53,9 @@
 			</td>
 			<td>
 				<a href = "javascript:void(0);" class = "menu_button" unselectable="on" onselectstart="return false" 
-					id = "menu_button_books" onclick = "set_menu_button('books')">
+					id = "menu_button_books" onclick = "set_menu_button('books'); new Ajax.Updater(
+   						'main', '/type', {method:'get', asynchronous:true, evalScripts:true }); 
+						set_page_location('home > books >'); return false;">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
@@ -73,7 +77,9 @@
 			</td>
 			<td>
 				<a href = "javascript:void(0);" class = "menu_button" unselectable="on" onselectstart="return false" 
-					id = "menu_button_contect" onclick = "set_menu_button('contect')">
+					id = "menu_button_contect" onclick = "set_menu_button('contect'); new Ajax.Updater(
+   						'main', '/contect', {method:'get', asynchronous:true, evalScripts:true }); 
+						set_page_location('home > contect us >'); return false;">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
@@ -96,13 +102,12 @@
 					<div class = "search_field" accept-charset="UTF-8" >
 						<input type = "text" class = "search_text" name = "q_text" id = "q_text" />
 						<a href="javascript:void(0);" style = "outline:none" class = "search_button" onclick="new Ajax.Updater(
-   						'main', '/<%= I18n.locale%>/searches?q=' + document.getElementById('q_text').value, {method:'get', asynchronous:true, evalScripts:true }); 
-						return false;"></a>
+   						'main', '/searches?q=' + document.getElementById('q_text').value, {method:'get', asynchronous:true, evalScripts:true }); 
+						set_page_location('home > search results >'); clear_menu_button(); return false;"></a>
 					</div>					
 			</td>
 		</table>
 		<div id = "page_location">
-			<%= t('.some')%>
 		</div>
 	</div>
 	<DIV id=center>
@@ -135,31 +140,6 @@
     				</div>
     			</td>
     			<td>
-    				<div id="category">
-    					
-		    			<ul>
-		    			<% if @categories %>
-		    			  <%= hidden_div_if(@categories.empty?, :id => "category") do %>
-		    				<% @categories.each do |category| %>
-							  <% if category.parentid == 0%>
-							  	<li>
-							  		<h3><%= link_to category.name, {:controller => "store", 
-							  			 :category_id => category.id}%></h3>
-							  		<ul>
-							  			<% @categories.each do |subcategory| %>
-										  <% if subcategory.parentid == category.id%>
-										  	<li><%= link_to subcategory.name, {:controller => "store", 
-										  		 :category_id => subcategory.id}%>
-										  <% end %>
-										<% end %>
-							  		</ul>
-							  	</li>
-							  <% end %>
-							<% end %>
-		    			  <% end %>
-		    			<% end %>
-		    			</ul>
-		    		</div>
     				<div id = "personal_space">
     					<div id = "hide_tag">
     						<a href = "javascript:void(0);" id = "hide_button" onclick="hide_personal_space()"></a>  
@@ -189,7 +169,7 @@
 								    			<%= link_to t('.product'), products_path %><br />
 								    			<%= link_to t('.star'), stars_path %><br />
 								    			<%= link_to t('.user'), users_path %><br />
-								    			<%= link_to t('.order'), orders_path %><br />								    											  											  											  				
+								    			<%= link_to t('.order'), orders_path %><br />
 								  			<% end %>								  										  												  			
 						  	    		<% end %>
     								</div>
@@ -266,4 +246,5 @@
 	}
 
 	var old_menu_button = document.getElementById("menu_button_home");
+	old_menu_button.className = "disable_menu_button";
 </script>
