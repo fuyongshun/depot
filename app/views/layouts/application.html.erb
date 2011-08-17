@@ -66,7 +66,9 @@
 			</td>
 			<td>
 				<a href = "javascript:void(0);" class = "menu_button" unselectable="on" onselectstart="return false" 
-					id = "menu_button_rank" onclick = "set_menu_button('rank')">
+					id = "menu_button_rank" onclick = "set_menu_button('rank'); new Ajax.Updater(
+   						'main', '/rank', {method:'get', asynchronous:true, evalScripts:true }); 
+						set_page_location('home > rank >'); return false;">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
