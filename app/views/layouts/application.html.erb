@@ -102,10 +102,13 @@
 			</td>
 			<td align = right style = "width:320px">					  			    
 					<div class = "search_field" accept-charset="UTF-8" >
+
 						<input type = "text" class = "search_text" name = "q_text" id = "q_text" />
 						<a href="javascript:void(0);" style = "outline:none" class = "search_button" onclick="new Ajax.Updater(
-   						'main', '/searches?q=' + document.getElementById('q_text').value, {method:'get', asynchronous:true, evalScripts:true }); 
-						set_page_location('home > search results >'); clear_menu_button(); return false;"></a>
+   						'main', '/<%= I18n.locale%>/searches?q=' + document.getElementById('q_text').value, {method:'get', asynchronous:true, evalScripts:true }); 
+						return false;"></a>
+
+						
 					</div>					
 			</td>
 		</table>

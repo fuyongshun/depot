@@ -186,6 +186,12 @@ chs:
       add:        "加到购物车"
       previous:   "上一页"
       next:       "下一页"
+      
+  type:
+    index:
+      add:        "加到购物车"
+      previous:   "上一页"
+      next:       "下一页"
 
   line_items:
     index:
@@ -233,6 +239,7 @@ chs:
       total:      "总计"
       empty:      "清空购物车"
       ifsure:     "你确定删除吗?"
+      back:       "返回"
     index:
       list:       "购物车列表"
       show:       "显示"

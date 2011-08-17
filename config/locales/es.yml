@@ -185,6 +185,12 @@ es:
       add:        "A&ntilde;adir al Carrito"
       previous:   "Previous"
       next:       "Next"
+      
+  type:
+    index:
+      add:        "Add to Cart"
+      previous:   "Previous"
+      next:       "Next"
 
   line_items:
     index:
