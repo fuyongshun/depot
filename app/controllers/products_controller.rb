@@ -44,6 +44,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @categories = Category.all
     @product = Product.find(params[:id])
   end
 
