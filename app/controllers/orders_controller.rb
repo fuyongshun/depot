@@ -17,6 +17,8 @@ class OrdersController < ApplicationController
   # GET /orders/1.xml
   def show
     @order = Order.find(params[:id])
+    @address = Address.find(@order.address_id)
+    @user = User.find(@address.user_id)
 
     respond_to do |format|
       format.html # show.html.erb
