@@ -185,6 +185,12 @@ en:
       add:        "Add to Cart"
       previous:   "Previous"
       next:       "Next"
+      
+  type:
+    index:
+      add:        "Add to Cart"
+      previous:   "Previous"
+      next:       "Next"
 
   line_items:
     index:
@@ -245,7 +251,7 @@ en:
       total:      "Total"
       empty:      "Empty Cart"
       ifsure:     "Are you sure?"
-      checkout:   "CHeckout"
+      checkout:   "Checkout"
       
   number:
     currency:
@@ -266,7 +272,7 @@ en:
 
   contect:
     index:
-      contect:     "Contact Us"
+      contect:     "Contect Us"
       aboutus:      "About Us"
         
   orders:
