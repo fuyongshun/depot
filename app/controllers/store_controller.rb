@@ -2,6 +2,15 @@ class StoreController < ApplicationController
   skip_before_filter :authorize
   skip_before_filter :admin_authorize
   def index
+    general()
+    render :layout => false
+  end
+
+  def show
+	general()
+  end
+
+  def general
     if params[:set_locale]
       redirect_to store_path(:locale => params[:set_locale])
     else
@@ -19,7 +28,7 @@ class StoreController < ApplicationController
       else
         @products = Product.all
       end
-      @products = Product.paginate :page => params[:page], :order => 'created_at desc',
+      @products = @products.paginate :page => params[:page], :order => 'created_at desc',
         :per_page => 5
         
       @cart = current_cart

@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
-  skip_before_filter :authorize  
-  skip_before_filter :admin_authorize
+  # skip_before_filter :authorize  
+  # skip_before_filter :admin_authorize
+  
   # GET /categories
   # GET /categories.xml
   def index
@@ -26,6 +27,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   # GET /categories/new.xml
   def new
+    @categories = Category.all
     @category = Category.new
 
     respond_to do |format|
@@ -36,6 +38,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1/edit
   def edit
+    @categories = Category.all
     @category = Category.find(params[:id])
   end
 

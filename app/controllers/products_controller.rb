@@ -7,7 +7,8 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     
-    @products = Product.paginate :page => params[:page], :order => 'created_at desc',
+    @products = Product.paginate :page => params[:page], 
+        :order => 'created_at DESC',
         :per_page => 5
 
     respond_to do |format|
@@ -19,8 +20,9 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.xml
   def show
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:id])    
     @star = Star.find(:last, :conditions => ['product_id = ? and user_id = ?', params[:id], session[:user_id]])
+    
 
     respond_to do |format|
       format.html # show.html.erb
@@ -31,6 +33,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   # GET /products/new.xml
   def new
+    @categories = Category.all
     @product = Product.new
 
     respond_to do |format|
@@ -41,6 +44,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @categories = Category.all
     @product = Product.find(params[:id])
   end
 
@@ -95,4 +99,5 @@ class ProductsController < ApplicationController
       format.xml { render :xml => @product }
     end
   end
+  
 end

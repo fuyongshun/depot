@@ -1,28 +1,29 @@
 <% if notice %>
 <p id="notice"><%=notice %></p>
 <% end %>
+<table>
+	<td>
+        <%= image_tag(@product.image_url, :class => 'image_size') %>
+      </td>
 
-<p>
-  <b><%= t('.title')%></b>
-  <%= @product.title %>
-</p>
+      <td>
+      	<br />
+      	<p><b><%= t('.title')%> <%= @product.title %></b></p>
+		<br />
+		<p>
+  			<b><%= t('.description')%></b>
+  			<%= @product.description.html_safe %>
+		</p>
+		<br />
+		<p>
+  			<b><%= t('.price')%></b>
+  			<%= @product.price %>
+		</p>
+      </td>
+</table>
 
-<p>
-  <b><%= t('.description')%></b>
-  <%= strip_tags(@product.description) %>
-</p>
-
-<p>
-  <b><%= t('.imageurl')%></b>
-  <%= image_tag(@product.image_url) %>
-</p>
-
-<p>
-  <b><%= t('.price')%></b>
-  <%= @product.price %>
-</p>
 <br />
-<% if session[:user_id] %>
+
 <p>
 	<div id="star_wrap">
 	<ul id="star_list">
@@ -76,8 +77,9 @@
 			this.addClassName("current-rating");
 		}
 	}
-	</script>
+	</script>		
 </p>
+
 <br />
 <p>
 	<h1><%= t('.comment')%></h1>
@@ -89,5 +91,4 @@
 </p>
 
 <%= link_to t('.edit'), edit_product_path(@product) %> |
-<%= link_to t('.back'), products_path %>
-<% end %>
+<%= link_to t('.back'), store_path %>

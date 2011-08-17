@@ -16,8 +16,15 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :parentid,t('.parentid') %><br />
-    <%= f.text_field :parentid %>
+  	Parent Category<br />
+  	<select name="cateigory[parentid]">
+    	<option value="0">None</option>
+    	<%if @categories%>
+    		<% @categories.each do |category| %>
+				<option value="<%=category.id%>" <%if category.parentid == @category.id%>selected = "selected"<%end%>><%=category.name%></option>
+			<% end %>
+    	<%end%>
+    </select>
   </div>
   <div class="actions">
     <%= f.submit t('.submit')%>

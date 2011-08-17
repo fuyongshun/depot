@@ -7,6 +7,7 @@ var menu =
 		['Account','u_account.htm'],
 		['Category','u_category.htm'],
 		['Search','u_search.htm'],
+		['Remark','u_remark.htm'],
 		['Cart','u_cart.htm'],
 		['Order','u_order.htm'],
 	],
