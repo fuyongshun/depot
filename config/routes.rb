@@ -5,7 +5,7 @@ Depot::Application.routes.draw do
   resources :searches  
   resources :type  
   resources :store
-  resources :contect
+  resources :contact
   resources :rank
 
   get 'admin' => 'admin#index'
@@ -26,8 +26,9 @@ Depot::Application.routes.draw do
     resources :categories
     resources :addresses
     resources :stars
-    resources :contect
+    resources :contact
     resources :type 
+    resources :rank
   #get "store/index"
 
   resources :products do
