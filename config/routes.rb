@@ -6,6 +6,7 @@ Depot::Application.routes.draw do
   resources :type  
   resources :store
   resources :contect
+  resources :rank
 
   get 'admin' => 'admin#index'
 
