@@ -8,7 +8,6 @@
     <th><%= t('.pay_type')%></th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @orders.each do |order| %>
@@ -19,7 +18,6 @@
     <td><%= address.phone %></td>
     <td><%= order.pay_type %></td>
     <td><%= link_to t('.show'), order %></td>
-    <td><%= link_to t('.edit'), edit_order_path(order) %></td>
     <td><%= link_to t('.destroy'), order, :confirm => t('.ifsure'), :method => :delete %></td>
   </tr>
 <% end %>

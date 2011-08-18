@@ -38,6 +38,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1/edit
   def edit
+    @categories = Category.all
     @category = Category.find(params[:id])
   end
 

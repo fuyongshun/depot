@@ -34,13 +34,19 @@ en:
       imageurl:    "Image Url"
       category:    "Category_id"
 
+  rank:
+    index:
+      add:        "Add to Cart"
+      previous:   "Previous"
+      next:       "Next"
+
   layouts:
     application:
       head:         "Pragprog Books Online Stroe"
       title:        "Pragmativ Bookshelf"
       home:         "Home"
       book:         "Books"
-      contect:      "Contect"
+      conteat:      "Contact"
       rank:         "Rank"
       help:         "Help"
       login:        "Login"
@@ -185,6 +191,12 @@ en:
       add:        "Add to Cart"
       previous:   "Previous"
       next:       "Next"
+      
+  type:
+    index:
+      add:        "Add to Cart"
+      previous:   "Previous"
+      next:       "Next"
 
   line_items:
     index:
@@ -245,7 +257,7 @@ en:
       total:      "Total"
       empty:      "Empty Cart"
       ifsure:     "Are you sure?"
-      checkout:   "CHeckout"
+      checkout:   "Checkout"
       
   number:
     currency:
@@ -264,9 +276,9 @@ en:
     form:
       submit:     "Add a comment"
 
-  contect:
+  contact:
     index:
-      contect:     "Contact Us"
+      contact:     "Contact Us"
       aboutus:      "About Us"
         
   orders:

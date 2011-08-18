@@ -79,14 +79,14 @@
 			</td>
 			<td>
 				<a href = "javascript:void(0);" class = "menu_button" unselectable="on" onselectstart="return false" 
-					id = "menu_button_contect" onclick = "set_menu_button('contect'); new Ajax.Updater(
-   						'main', '/contect', {method:'get', asynchronous:true, evalScripts:true }); 
-						set_page_location('home > contect us >'); return false;">
+					id = "menu_button_contact" onclick = "set_menu_button('contact'); new Ajax.Updater(
+   						'main', '/contact', {method:'get', asynchronous:true, evalScripts:true }); 
+						set_page_location('home > contact us >'); return false;">
 					<div class = "item_name">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<div class = "bottom_text">	<%= t('.contect')%>	</div>
-						<div class = "top_text">	<%= t('.contect')%>	</div>
+						<div class = "bottom_text">	<%= t('.contact')%>	</div>
+						<div class = "top_text">	<%= t('.contact')%>	</div>
 					</div>
 				</a>		
 			</td>
@@ -102,10 +102,13 @@
 			</td>
 			<td align = right style = "width:320px">					  			    
 					<div class = "search_field" accept-charset="UTF-8" >
+
 						<input type = "text" class = "search_text" name = "q_text" id = "q_text" />
 						<a href="javascript:void(0);" style = "outline:none" class = "search_button" onclick="new Ajax.Updater(
-   						'main', '/searches?q=' + document.getElementById('q_text').value, {method:'get', asynchronous:true, evalScripts:true }); 
-						set_page_location('home > search results >'); clear_menu_button(); return false;"></a>
+   						'main', '/<%= I18n.locale%>/searches?q=' + document.getElementById('q_text').value, {method:'get', asynchronous:true, evalScripts:true }); 
+						return false;"></a>
+
+						
 					</div>					
 			</td>
 		</table>
