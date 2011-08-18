@@ -245,14 +245,21 @@
 	if(get_cookie_value("menu_number") == ""){
 		nonius.style.left = "74px";
 		nonius_text.style.left = "-63px";
+		set_cookie_value("menu_number", "" + 1);
 	}else{
 		var nm = parseInt(get_cookie_value("menu_number"));
 		nonius.style.left = "" + (11 + 63 * nm) + "px";
 		nonius_text.style.left = "" + -63 * nm + "px";
-	}
-	
+	}	
+
 	document.getElementById("profile").hide();
+	document.getElementById("cart").hide();
 	document.getElementById("managet").hide();
+	switch(parseInt(get_cookie_value("menu_number"))){
+		case 0: document.getElementById("profile").show();break;
+		case 1: document.getElementById("cart").show();break;
+		case 2: document.getElementById("managet").show();break;
+	}
 
 	var hide_button = document.getElementById("hide_button");
 	var show_button = document.getElementById("show_button");
