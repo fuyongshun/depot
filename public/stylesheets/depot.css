@@ -26,7 +26,7 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 									     background:url(../images/personal_board_bottom.png) no-repeat bottom; }
 							#personal_blank{display:block; width:274px; height:30px;}
 							#personal_menu{ position:relative; top:-382px; left:16px;}
-							#nonius{position:relative; /*top:-348px;*/top:-348px; left:11px;/*left:137px;*/ display:block; width:78px; height:42px; 
+							#nonius{position:relative; /*top:-348px;*/top:-348px; left:74px;/*left:137px;*/ display:block; width:78px; height:42px; 
 									     background:url(../images/nonius.png) no-repeat; }
 								#nonius_border{display:block; width:60px; height:28px; /*background:#d57;*/ overflow:hidden;
 											 position:relative; left:-14px; top:9px;}

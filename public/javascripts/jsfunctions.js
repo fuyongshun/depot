@@ -1,4 +1,13 @@
 function move_to(num) {	
+	document.getElementById("profile").hide();
+	document.getElementById("cart").hide();
+	document.getElementById("managet").hide();
+	switch(num){
+		case 0: document.getElementById("profile").show();break;
+		case 1: document.getElementById("cart").show();break;
+		case 2: document.getElementById("managet").show();break;
+	}
+	
 	set_cookie_value("menu_number", "" + num);
     	var posx = parseInt(nonius.style.left);
     	var number = parseInt(num);

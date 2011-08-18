@@ -31,3 +31,7 @@ gem 'sqlite3'
 # end
 
 gem 'will_paginate', '>= 3.0.pre'
+
+group :production do
+  gem 'mysql'
+end
