@@ -157,27 +157,47 @@
     						<div id = "personal_content_box">
     							<div id = "personal_content_top">
     								<div id = "personal_content_bottom">
-    								<div id = "personal_blank">
-    								</div>
- 	   								<div id="cart">
+										<div id = "personal_blank">
+										</div>
+										<div id = "profile">
+											<% if session[:user_id] %>
+												<% current_user = User.find(session[:user_id]) %>
+												<br />
+												<p>												
+													<b><%= t('.name')%></b>
+													<%= current_user.name %>
+												</p>
+												<p>
+													<b><%= t('.email')%></b>
+													<%= current_user.email %>
+												</p>
+												<p>
+													<b><%= t('.role')%></b>
+													<%= current_user.role %>
+												</p>											
+											<% end %>
+										</div>
+										<div id="cart">
     										<% if @cart %>
     				  							<%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
     												<%= render @cart %>
     				  							<% end %>
     										<% end %>
-    									</div>
-    									<% if session[:user_id] %>
-    										<% user = User.find(session[:user_id]) %>
-    										<% if user.is_admin%>
-			  					    			<br />
-			 					    			<%= link_to t('.category'), categories_path %><br />
-								    			<%= link_to t('.product'), products_path %><br />
-								    			<%= link_to t('.star'), stars_path %><br />
-								    			<%= link_to t('.user'), users_path %><br />
-								    			<%= link_to t('.order'), orders_path %><br />
-								  			<% end %>								  										  												  			
-						  	    		<% end %>
-    								</div>
+										</div>
+										<div id = "managet">	
+											<% if session[:user_id] %>
+												<% user = User.find(session[:user_id]) %>
+												<% if user.is_admin%>
+													<br />
+													<%= link_to t('.category'), categories_path %><br />
+													<%= link_to t('.product'), products_path %><br />
+													<%= link_to t('.star'), stars_path %><br />
+													<%= link_to t('.user'), users_path %><br />
+													<%= link_to t('.order'), orders_path %><br />
+												<% end %>								  										  												  			
+											<% end %>
+										</div>
+									</div>
     							</div>
     						</div>
     						<div id = "nonius">
@@ -194,8 +214,6 @@
     										  onclick="move_to(1)" class = "personal_menu_item"></a></td>
     								<td valign="top"><a href="javascript:void(0);" 
     										  onclick="move_to(2)" class = "personal_menu_item"></a></td>
-    								<td valign="top"><a href="javascript:void(0);" 
-    										  onclick="move_to(3)" class = "personal_menu_item"></a></td>
     							</table>
     						</div>
     					</div>
@@ -225,12 +243,16 @@
 	var nonius = document.getElementById("nonius");
 	var nonius_text = document.getElementById("nonius_text");
 	if(get_cookie_value("menu_number") == ""){
-		nonius.style.left = "11px";
+		nonius.style.left = "74px";
+		nonius_text.style.left = "-63px";
 	}else{
 		var nm = parseInt(get_cookie_value("menu_number"));
 		nonius.style.left = "" + (11 + 63 * nm) + "px";
 		nonius_text.style.left = "" + -63 * nm + "px";
 	}
+	
+	document.getElementById("profile").hide();
+	document.getElementById("managet").hide();
 
 	var hide_button = document.getElementById("hide_button");
 	var show_button = document.getElementById("show_button");
