@@ -246,6 +246,12 @@ body {background:#E6E6E6; min-width:900px;font-family:"trebuchet MS", sans-serif
 	//
 	border-bottom: 3px dotted #77d;
 }
+
+.image_size{
+	width: 240px;
+	height: 280px;
+	margin-right: 3px;
+}
 /* Styles for products/index */
 
 #product_list table {
@@ -563,10 +569,10 @@ z-index: 2;
 	Z-INDEX: 2;position:relative;height:317px;
 }
 #slider {
-	Z-INDEX: 1; BORDER-BOTTOM: #000 20px solid; POSITION: absolute; BORDER-LEFT: #000 20px solid; WIDTH: 860px; BACKGROUND: #000; HEIGHT: 250px; OVERFLOW: hidden; BORDER-TOP: #000 20px solid; BORDER-RIGHT: #000 20px solid; 
+	Z-INDEX: 1; BORDER-BOTTOM: #ddd 20px solid; POSITION: absolute; BORDER-LEFT: #eee 20px solid; WIDTH: 860px; BACKGROUND: #000; HEIGHT: 250px; OVERFLOW: hidden; BORDER-TOP: #f5f5f5 20px solid; BORDER-RIGHT: #eee 20px solid; 
 }
 #slider .slide {
-	Z-INDEX: 10; POSITION: absolute; BORDER-LEFT: #000 1px solid; WIDTH: 520px; BACKGROUND: #000; HEIGHT: 250px; OVERFLOW: hidden; CURSOR: default;
+	Z-INDEX: 10; POSITION: absolute; BORDER-LEFT: #000 1px solid; WIDTH: 520px; BACKGROUND: #a5a5a5; HEIGHT: 250px; OVERFLOW: hidden; CURSOR: default;
 }
 #slider .title {
 	COLOR: #f80; FONT-SIZE: 1.2em; FONT-WEIGHT: bold; MARGIN-RIGHT: 1.5em; TEXT-DECORATION: none

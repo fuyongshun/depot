@@ -1,16 +1,7 @@
-class StoreController < ApplicationController
+class TypeController < ApplicationController
   skip_before_filter :authorize
   skip_before_filter :admin_authorize
   def index
-    general()
-    render :layout => false
-  end
-
-  def show
-	general()
-  end
-
-  def general
     if params[:set_locale]
       redirect_to store_path(:locale => params[:set_locale])
     else
@@ -34,6 +25,6 @@ class StoreController < ApplicationController
       @cart = current_cart
       @categories = Category.all
     end
+    render :layout => false
   end
-
 end

@@ -85,6 +85,10 @@ function link_to(address, button_type, button_name){
 }*/
 
 
+function clear_menu_button(){
+	old_menu_button.className = "menu_button";
+}
+
 function set_menu_button(menu_button_name){
 	old_menu_button.className = "menu_button";
 	var menu_button = document.getElementById("menu_button_" + menu_button_name);
@@ -93,6 +97,7 @@ function set_menu_button(menu_button_name){
 }
 
 function set_page_location(location){
+	set_cookie_value("page_location", "location");
 	var page_location = document.getElementById("page_location");
 	page_location.innerHTML = location;
 }
