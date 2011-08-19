@@ -6,6 +6,30 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 # encoding: utf-8
+#-------------------------------------
+Star.delete_all
+Order.delete_all
+Comment.delete_all
+Address.delete_all
+Cart.delete_all
+LineItem.delete_all
+
+Category.delete_all
+Category.create(
+  :name => 'test',
+  :parentid => 0)
+# . . .
+
+Category.create(
+  :name => 'test1',
+  :parentid => 0)  
+#. . .
+
+Category.create(
+  :name => 'test2',
+  :parentid => 1)
+
+#---------------------------------
 Product.delete_all
 Product.create(:title => 'Web Design for Developers',
   :description => 
@@ -19,7 +43,8 @@ Product.create(:title => 'Web Design for Developers',
         all the way to implementation.
       </p>},
   :image_url =>   '/images/wd4d.jpg',    
-  :price => 42.95)
+  :price => 42.95,
+  :category_id => 1)
 # . . .
 Product.create(:title => 'Programming Ruby 1.9',
   :description =>
@@ -29,7 +54,8 @@ Product.create(:title => 'Programming Ruby 1.9',
         you should add Ruby to your toolbox.
       </p>},
   :image_url => '/images/ruby.jpg',
-  :price => 49.50)
+  :price => 49.50,
+  :category_id => 2)
 # . . .
 
 Product.create(:title => 'Rails Test Prescriptions',
@@ -43,4 +69,24 @@ Product.create(:title => 'Rails Test Prescriptions',
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
       </p>},
   :image_url => '/images/rtp.jpg',
-  :price => 43.75)
+  :price => 43.75,
+  :category_id => 3)
+
+#-------------------------------------
+User.delete_all
+SALT = "NaCl" unless defined?(SALT)
+User.create(
+  :name => 'admin',
+  :hashed_password => User.encrypt_password('root', SALT),
+  :salt => SALT,  
+  :email => 'PragmaticStore@gmail.com',
+  :role => 'Administrator')
+# . . .
+
+User.create(
+  :name => 'SignUp',
+  :hashed_password => User.encrypt_password('root', SALT),
+  :salt => SALT,  
+  :email => 'signup@example.com',
+  :role => 'Register_User')
+# . . .
